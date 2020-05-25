@@ -26,7 +26,6 @@ public class PlayerController : MonoBehaviour
     {
         extraJumps = extraJumpValue;
         rb = GetComponent<Rigidbody2D>();
-       
     }
 
     private void FixedUpdate()
