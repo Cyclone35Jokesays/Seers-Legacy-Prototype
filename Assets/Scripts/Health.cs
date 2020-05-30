@@ -15,7 +15,6 @@ public class Health : MonoBehaviour
 
     private void Update()
     {
-
         if (health > numOfHearts)
         {
             health = numOfHearts;
@@ -39,9 +38,21 @@ public class Health : MonoBehaviour
             {
                 hearts[i].enabled = false;
             }
-        }
-        
+        }     
     }
+
+   /* private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag ("Enemy"))
+        {
+            health -= 1;
+
+            if (health <= 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
+    } */
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -54,5 +65,15 @@ public class Health : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
-    }
+
+        if (collision.gameObject.name == "Flying Enemy")
+        {
+            health -= 1;
+
+            if (health <= 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
+    } 
 }
