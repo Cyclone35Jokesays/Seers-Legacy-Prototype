@@ -429,7 +429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  jumpForce: 7
+  jumpForce: 7.5
   groundCheck: {fileID: 7438225583457520372}
   checkRadius: 0.5
   whatIsGround:
@@ -498,6 +498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   numOfHearts: 5
+  restoreHealth: 0
   hearts:
   - {fileID: 0}
   - {fileID: 0}

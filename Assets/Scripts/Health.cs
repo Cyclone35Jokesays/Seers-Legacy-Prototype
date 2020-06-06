@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
 {
     public int health;
     public int numOfHearts;
+    public int restoreHealth;
 
     public Image[] hearts;
     public Sprite fullHeart;
@@ -40,6 +41,8 @@ public class Health : MonoBehaviour
             }
         }     
     }
+
+    
 
    /* private void OnTriggerEnter2D(Collider2D collision)
     {
