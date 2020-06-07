@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     private float moveInput;
     private Rigidbody2D rb;
+    bool isTouchingFront;
+    public Transform frontCheck;
 
     private bool facingRight = true;
 
@@ -18,9 +20,9 @@ public class PlayerController : MonoBehaviour
 
     private int extraJumps;
     public int extraJumpValue;
-
     
     public Animator anim;
+    private int input;
 
     private void Start()
     {
@@ -35,7 +37,7 @@ public class PlayerController : MonoBehaviour
         moveInput = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         anim.SetFloat("Speed", Mathf.Abs(moveInput));
-
+        
         if (facingRight == false && moveInput > 0)
         {
             Flip();

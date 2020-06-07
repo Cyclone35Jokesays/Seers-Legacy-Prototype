@@ -430,6 +430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 6
   jumpForce: 7.5
+  frontCheck: {fileID: 0}
   groundCheck: {fileID: 7438225583457520372}
   checkRadius: 0.5
   whatIsGround:
@@ -577,7 +578,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 427891473
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -3316437661583186769, guid: b08c187523a5a8346abd32e803c1534f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
