@@ -8,7 +8,6 @@ public class Health : MonoBehaviour
 {
     public int health;
     public int numOfHearts;
-    public int restoreHealth;
 
     public Image[] hearts;
     public Sprite fullHeart;
@@ -39,23 +38,8 @@ public class Health : MonoBehaviour
             {
                 hearts[i].enabled = false;
             }
-        }     
-    }
-
-    
-
-   /* private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag ("Enemy"))
-        {
-            health -= 1;
-
-            if (health <= 0)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
         }
-    } */
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
