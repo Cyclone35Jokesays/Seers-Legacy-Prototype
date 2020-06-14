@@ -42,5 +42,8 @@ public class Projectile : MonoBehaviour
     {
         Instantiate(destroyEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
+       
+        SoundManager.PlaySound("Explode");
+        
     }
 }

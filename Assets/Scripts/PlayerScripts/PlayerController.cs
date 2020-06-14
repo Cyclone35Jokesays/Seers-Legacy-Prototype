@@ -37,7 +37,17 @@ public class PlayerController : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
         moveInput = Input.GetAxis("Horizontal");
-            
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            SoundManager.PlaySound("Running");
+        }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            SoundManager.PlaySound("Running");
+        }
+
+
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         anim.SetFloat("Speed", Mathf.Abs(moveInput));
 
@@ -76,6 +86,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce;
             extraJumps--;
+            SoundManager.PlaySound("Jump");
         }
 
         else if (Input.GetKeyDown(KeyCode.W) && extraJumps == 0 && isGrounded == true)
