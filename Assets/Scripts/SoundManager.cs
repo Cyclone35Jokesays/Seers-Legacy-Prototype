@@ -7,6 +7,22 @@ public class SoundManager : MonoBehaviour
     public static AudioClip RunningSound, JumpSound, FireSound, DeathSound;
     static AudioSource audioSrc;
 
+    private static SoundManager instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(instance);
+        }
+
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
         RunningSound = Resources.Load<AudioClip>("Running");
