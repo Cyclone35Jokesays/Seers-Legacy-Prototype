@@ -9,8 +9,6 @@ public class PlayerController : MonoBehaviour
     private float moveInput;
     private Rigidbody2D rb;
 
-    //private bool facingRight = true;
-
     private bool isGrounded;
     public Transform groundCheck;
     public float checkRadius;
@@ -47,19 +45,8 @@ public class PlayerController : MonoBehaviour
             SoundManager.PlaySound("Running");
         }
 
-
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         anim.SetFloat("Speed", Mathf.Abs(moveInput));
-
-        /* if (facingRight == false && moveInput > 0)
-         {
-             Flip();
-         }
-
-         else if (facingRight == true && moveInput < 0)
-         {
-             Flip();
-         } */
 
         if (moveInput > 0)
         {
@@ -113,15 +100,6 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = false;
         }
+        
     }
-
-    /*public void Flip()
-    {
-        facingRight = !facingRight;
-        Vector3 Scaler = transform.localScale;
-        Scaler.x *= -1;
-        transform.localScale = Scaler;
-    }  */
-
-   
 }

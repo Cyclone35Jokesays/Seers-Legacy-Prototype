@@ -72,5 +72,35 @@ public class Health : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
+
+        if (collision.gameObject.name == "Bat Enemy")
+        {
+            health -= 1;
+
+            if (health <= 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
+
+        if (collision.gameObject.name == "IdleStalker")
+        {
+            health -= 1;
+
+            if (health <= 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
+
+        if (collision.gameObject.name == "ShooterEnemy")
+        {
+            health -= 1;
+
+            if (health <= 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        } 
     } 
 }
