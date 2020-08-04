@@ -40,67 +40,33 @@ public class Health : MonoBehaviour
             }
         }
     }
+    public void takeDamage()
+    {
+        health -= 1;
+    }
+
+    public void restoreHealth()
+    {
+        health += 1;
+    }
+
+    public void restartHP()
+    {
+        health += 5;
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Walking Enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
             health -= 1;
+            Debug.Log("hit");
 
             if (health <= 0)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                restartHP();
             }
         }
-
-        if (collision.gameObject.name == "Flying Enemy")
-        {
-            health -= 1;
-
-            if (health <= 0)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
-        }
-
-        if (collision.gameObject.name == "Boss")
-        {
-            health -= 1;
-
-            if (health <= 0)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
-        }
-
-        if (collision.gameObject.name == "Bat Enemy")
-        {
-            health -= 1;
-
-            if (health <= 0)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
-        }
-
-        if (collision.gameObject.name == "IdleStalker")
-        {
-            health -= 1;
-
-            if (health <= 0)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
-        }
-
-        if (collision.gameObject.name == "ShooterEnemy")
-        {
-            health -= 1;
-
-            if (health <= 0)
-            {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
-        } 
     } 
 }

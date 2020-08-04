@@ -118,6 +118,7 @@ MonoBehaviour:
   health: 999
   deathEffect: {fileID: 7225817443232445325, guid: 4522d475ceef6fe42b9023617c94cbca,
     type: 3}
+  Health: {fileID: 8805691691848163449, guid: 808ba1c7ad3a8e249b128532c1308155, type: 3}
 --- !u!70 &5996849593772401690
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

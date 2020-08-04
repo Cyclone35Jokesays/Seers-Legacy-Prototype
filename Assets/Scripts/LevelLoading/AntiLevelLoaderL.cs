@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class AntiLevelLoaderL : MonoBehaviour
 {
     public Animator transition;
-    public float transitionTime = 0.45f;
+    private float transitionTime = 0.5f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

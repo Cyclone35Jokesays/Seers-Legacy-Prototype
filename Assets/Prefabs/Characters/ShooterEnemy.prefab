@@ -148,9 +148,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7bfee03d3fc3524d97fe61f9f4ef14e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
+  health: 2
   deathEffect: {fileID: 7225817443232445325, guid: 4522d475ceef6fe42b9023617c94cbca,
     type: 3}
+  Health: {fileID: 8805691691848163449, guid: 808ba1c7ad3a8e249b128532c1308155, type: 3}
 --- !u!70 &1430706965789426738
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -179,9 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b063e1181427fd744a3e2bf18a1980b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stoppingDistance: 5
-  retreatDistance: 4
-  startTimeBtwShots: 1.2
+  startTimeBtwShots: 2.5
   projectile: {fileID: 8686834216095720108, guid: 5f7668025e4f21f4bbb026a96dc3be64,
     type: 3}
 --- !u!1 &1430706966531105469

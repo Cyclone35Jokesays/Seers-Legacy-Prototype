@@ -6,7 +6,7 @@ public class Checkpoint : MonoBehaviour
 {
     private GameMaster gm;
 
-    void Start()
+    public void Start()
     {
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
     }

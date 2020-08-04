@@ -33,11 +33,6 @@ public class SoundManager : MonoBehaviour
         audioSrc = GetComponent<AudioSource>();
     }
 
-    
-    void Update()
-    {
-        
-    }
 
     public static void PlaySound(string clip)
     {

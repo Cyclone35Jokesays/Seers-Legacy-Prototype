@@ -24,7 +24,6 @@ public class Blaster : MonoBehaviour
                 Instantiate(projectile, shotPoint.position, transform.rotation);
                 timeBtwShots = startTimeBtwShots;
                 SoundManager.PlaySound("Blaster");
-                
             }
         }
         else

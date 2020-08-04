@@ -22,7 +22,11 @@ public class PlayerController : MonoBehaviour
     bool isJumping;
     
     public Animator anim;
-    private int input;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
     private void Start()
     {
@@ -36,11 +40,11 @@ public class PlayerController : MonoBehaviour
 
         moveInput = Input.GetAxis("Horizontal");
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
             SoundManager.PlaySound("Running");
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
             SoundManager.PlaySound("Running");
         }
@@ -73,17 +77,17 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = Vector2.up * jumpForce;
             extraJumps--;
-            SoundManager.PlaySound("Jump");
         }
 
-        else if (Input.GetKeyDown(KeyCode.W) && extraJumps == 0 && isGrounded == true)
+        else if (Input.GetKeyDown(KeyCode.W) && extraJumps == 0 && isGrounded)
         {
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
+            SoundManager.PlaySound("Jump");
         }
 
-        if (Input.GetKey(KeyCode.W) && isJumping == true)
+        if (Input.GetKey(KeyCode.W) && isJumping)
         {
             if (jumpTimeCounter > 0)
             {
@@ -99,7 +103,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.W))
         {
             isJumping = false;
-        }
-        
+        }       
     }
 }

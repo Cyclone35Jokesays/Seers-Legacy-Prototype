@@ -6,13 +6,15 @@ public class Enemy : MonoBehaviour
 {
     public int health;
     public GameObject deathEffect;
+    public GameObject Health;
     
     private void Update()
     {
         if (health <= 0)
         {
             Instantiate(deathEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject); 
+            Instantiate(Health, transform.position, Quaternion.identity);
+            Destroy(gameObject);           
         }
     }
 
