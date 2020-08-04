@@ -155,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 285.5, y: -88.998955}
+  m_AnchoredPosition: {x: 285.5, y: -75}
   m_SizeDelta: {x: 1006.14307, y: 998.13794}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &42987398
@@ -190,9 +190,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.87
-  m_Text: " Sebastian Pesa\n\n Sebastian Pesa (who else?)\n\n -(Animated Pixel Adventurer)
-    rvros\n -(Warped Caves) Ansimuz\n -(Cavernas) Adam Saltsman\n -(Nature) Jakub
-    Varga\n\n Leo Sobrepena: Thank You\n\nTBA \xAF\\_(\u30C4)_/\xAF\n"
+  m_Text: " Sebastian Pesa\n\n Sebastian Pesa \n Discord friends\n\n -(Animated Pixel
+    Adventurer) rvros\n -(Warped Caves) Ansimuz\n -(Cavernas) Adam Saltsman\n -(Nature)
+    Jakub Varga\n\n Leo Sobrepena: Thank You\n\nTBA \xAF\\_(\u30C4)_/\xAF\n"
 --- !u!222 &42987399
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -642,7 +642,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -817,7 +817,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -472, y: -89}
+  m_AnchoredPosition: {x: -472, y: -75.00098}
   m_SizeDelta: {x: 508.80115, y: 998.136}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1619786933
@@ -852,7 +852,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Designer: \n\nProgrammer:\n\nAssets:\n\n\n\n\nMusic:\n\nSupport me on:"
+  m_Text: "Designer: \n\nProgrammer:\n\n\nAssets:\n\n\n\n\nMusic:\n\nSupport me on:"
 --- !u!222 &1619786934
 CanvasRenderer:
   m_ObjectHideFlags: 0

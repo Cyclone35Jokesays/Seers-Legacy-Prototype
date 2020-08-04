@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class PlayerController : MonoBehaviour
     
     public Animator anim;
 
+    private GameMaster gm; 
+
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -32,6 +35,8 @@ public class PlayerController : MonoBehaviour
     {
         extraJumps = extraJumpValue;
         rb = GetComponent<Rigidbody2D>();
+
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
     }
 
     private void FixedUpdate()
@@ -40,11 +45,11 @@ public class PlayerController : MonoBehaviour
 
         moveInput = Input.GetAxis("Horizontal");
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             SoundManager.PlaySound("Running");
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             SoundManager.PlaySound("Running");
         }
@@ -64,6 +69,13 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+         if (Input.GetKeyDown(KeyCode.R))
+         {
+             Debug.Log("I am teleporting");
+             transform.position = gm.lastCheckPointPos;
+             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+         } 
+
         if (isGrounded == true)
         {
             extraJumps = extraJumpValue;
@@ -73,18 +85,20 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("IsJumping", true);
         }
-        if (Input.GetKeyDown(KeyCode.W) && extraJumps > 0)
-        {
-            rb.velocity = Vector2.up * jumpForce;
-            extraJumps--;
-        }
 
-        else if (Input.GetKeyDown(KeyCode.W) && extraJumps == 0 && isGrounded)
+        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
         {
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
             SoundManager.PlaySound("Jump");
+        }
+
+        else if (Input.GetKeyDown(KeyCode.W) && extraJumps > 0)
+        {
+            rb.velocity = Vector2.up * jumpForce;
+            jumpTimeCounter = jumpTime;
+            extraJumps--;           
         }
 
         if (Input.GetKey(KeyCode.W) && isJumping)

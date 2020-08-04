@@ -9,9 +9,16 @@ public class Health : MonoBehaviour
     public int health;
     public int numOfHearts;
 
+    private GameMaster gm;
+
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite EmptyHeart;
+
+    private void Awake()
+    {
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();       
+    }
 
     private void Update()
     {
@@ -60,12 +67,13 @@ public class Health : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             health -= 1;
-            Debug.Log("hit");
+        
 
             if (health <= 0)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                 restartHP();
+                transform.position = gm.lastCheckPointPos;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);           
             }
         }
     } 

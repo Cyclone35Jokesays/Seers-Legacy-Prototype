@@ -9,8 +9,9 @@ public class PlayerPos : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("Player position script activated");
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-        transform.position = gm.lastCheckPointPos;
+        transform.position = gm.lastCheckPointPos;       
     }
 
     void Update()
