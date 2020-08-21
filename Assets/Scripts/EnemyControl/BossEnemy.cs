@@ -9,14 +9,15 @@ public class BossEnemy : MonoBehaviour
     public int health;
     public GameObject deathEffect;
     public Slider HealthBar;
+    public GameObject Key;
 
     private void Update()
     {
         if (health <= 0)
         {
             Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Instantiate(Key, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            SceneManager.LoadScene(12);
         }
         HealthBar.value = health;
     }

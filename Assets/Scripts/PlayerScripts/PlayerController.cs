@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+    public Blaster blaster;
+
     public float speed;
     public float jumpForce;
     private float moveInput;
@@ -118,5 +120,17 @@ public class PlayerController : MonoBehaviour
         {
             isJumping = false;
         }       
+    }
+
+    public IEnumerator Knockback(float knockDuration, float knockPower, Vector2 knockbackDirection)
+    {
+        float timer = 0;
+        rb.velocity = new Vector2(rb.velocity.x, 0);
+        while( knockDuration > timer)
+        {
+            timer += Time.deltaTime;
+            rb.AddForce(new Vector2(knockbackDirection.x * -100, knockbackDirection.y + knockPower));
+        }
+        yield return 0;
     }
 }

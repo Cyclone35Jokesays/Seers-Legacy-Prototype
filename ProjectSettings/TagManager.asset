@@ -8,6 +8,8 @@ TagManager:
   - GM
   - Boss
   - Target
+  - Obstacle
+  - Blaster
   layers:
   - Default
   - TransparentFX

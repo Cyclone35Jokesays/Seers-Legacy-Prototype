@@ -5,12 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class WaterCollision : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    private Health damage;
+    private PlayerController player;
+
+    private void Awake()
     {
-        if (collision.CompareTag("Player"))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
+        damage = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.CompareTag("Player"))
+        {
+            damage.takeDamage();
+            StartCoroutine(player.Knockback(0.01f, 400, player.transform.position));
+        }
+
+
+    }
 }

@@ -6,7 +6,14 @@ using UnityEngine.SceneManagement;
 public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
-    private float transitionTime = 0.5f;
+    private float transitionTime = 0.6f;
+
+    private GameMaster gm;
+
+    private void Awake()
+    {
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+    } 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,6 +23,7 @@ public class LevelLoader : MonoBehaviour
     public void LoadNextLevel()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+       // StartCoroutine("ReloadLevel");
     }
 
     IEnumerator LoadLevel(int levelIndex)
@@ -25,5 +33,16 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(transitionTime);
 
         SceneManager.LoadScene(levelIndex);
+        yield return new WaitForSeconds(transitionTime + 0.3f);
+        transform.position = gm.lastCheckPointPos;
     }
+
+   /* IEnumerator ReloadLevel(bool setLoad)
+    {
+        yield return new WaitForSeconds(transitionTime + 0.7f);
+        setLoad = false;
+        transform.position = gm.lastCheckPointPos;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        setLoad = true;
+    } */
 }

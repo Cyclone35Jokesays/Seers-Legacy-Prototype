@@ -14,10 +14,12 @@ public class Health : MonoBehaviour
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite EmptyHeart;
+    private PlayerController player;
 
     private void Awake()
     {
-        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();       
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
     }
 
     private void Update()
@@ -59,7 +61,7 @@ public class Health : MonoBehaviour
 
     public void restartHP()
     {
-        health += 5;
+        health += 3;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -67,7 +69,7 @@ public class Health : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             health -= 1;
-        
+            StartCoroutine(player.Knockback(0.02f, 400, player.transform.position));
 
             if (health <= 0)
             {
@@ -75,6 +77,19 @@ public class Health : MonoBehaviour
                 transform.position = gm.lastCheckPointPos;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);           
             }
+        }       
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Obstacle")
+        {
+            if (health <= 0)
+            {
+                restartHP();
+                transform.position = gm.lastCheckPointPos;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
         }
-    } 
+    }
 }
