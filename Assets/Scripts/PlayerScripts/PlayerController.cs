@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     private float jumpTimeCounter;
     public float jumpTime;
     bool isJumping;
+
+    public ParticleSystem dust;
     
     public Animator anim;
 
@@ -62,6 +64,7 @@ public class PlayerController : MonoBehaviour
         if (moveInput > 0)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
+
         }
         else if (moveInput < 0)
         {
@@ -71,9 +74,17 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-         if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKey(KeyCode.A))
+        {
+            CreateDust();
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            CreateDust();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
          {
-             Debug.Log("I am teleporting");
              transform.position = gm.lastCheckPointPos;
              SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
          } 
@@ -94,13 +105,14 @@ public class PlayerController : MonoBehaviour
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
             SoundManager.PlaySound("Jump");
+
         }
 
         else if (Input.GetKeyDown(KeyCode.W) && extraJumps > 0)
         {
             rb.velocity = Vector2.up * jumpForce;
             jumpTimeCounter = jumpTime;
-            extraJumps--;           
+            extraJumps--;
         }
 
         if (Input.GetKey(KeyCode.W) && isJumping)
@@ -132,5 +144,10 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(new Vector2(knockbackDirection.x * -100, knockbackDirection.y + knockPower));
         }
         yield return 0;
+    }
+
+    void CreateDust()
+    {
+        dust.Play();
     }
 }

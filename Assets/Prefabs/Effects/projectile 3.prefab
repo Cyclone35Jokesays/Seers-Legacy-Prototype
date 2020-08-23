@@ -98,8 +98,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8686834216095720108}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.46, y: -1.6054432, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children:
   - {fileID: 6636538855783281402}
   m_Father: {fileID: 0}
@@ -167,13 +167,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e335ef8efa48a742b8b20bb75660f2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  lifeTime: 1.4
+  speed: 3
+  lifeTime: 1
   distance: 0.5
   damage: 1
   whatIsSolid:
     serializedVersion: 2
     m_Bits: 768
-  direction: {x: 1, y: 0.5}
+  direction: {x: 1, y: 0.6}
   destroyEffect: {fileID: 7225817443232445325, guid: abcc9d5e589088b4cabeddab8c69a481,
     type: 3}
