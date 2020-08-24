@@ -69,7 +69,7 @@ public class Health : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             health -= 1;
-            StartCoroutine(player.Knockback(0.02f, 400, player.transform.position));
+            StartCoroutine(player.Knockback(0.015f, 400, player.transform.position));
 
             if (health <= 0)
             {
@@ -77,7 +77,20 @@ public class Health : MonoBehaviour
                 transform.position = gm.lastCheckPointPos;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);           
             }
-        }       
+        }
+
+        if (collision.gameObject.tag == "Boss")
+        {
+            health -= 1;
+            StartCoroutine(player.Knockback(0.015f, 400, player.transform.position));
+
+            if (health <= 0)
+            {
+                restartHP();
+                transform.position = gm.lastCheckPointPos;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

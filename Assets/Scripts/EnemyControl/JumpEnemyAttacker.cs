@@ -26,6 +26,7 @@ public class JumpEnemyAttacker : MonoBehaviour
     [Header("For SeeingPlayer")]
     [SerializeField] Vector2 lineOfSite;
     [SerializeField] LayerMask playerLayer;
+    [SerializeField] float aggroDistance = 10.0f;
     private bool canSeePlayer;
 
     [Header("Other")]
@@ -36,6 +37,7 @@ public class JumpEnemyAttacker : MonoBehaviour
     {
         enemyRB = GetComponent<Rigidbody2D>();
         enemyAnim = GetComponent<Animator>();
+        player = GameManager.Instance.player.transform;
     }
 
     private void FixedUpdate()
@@ -43,7 +45,11 @@ public class JumpEnemyAttacker : MonoBehaviour
         checkingGround = Physics2D.OverlapCircle(groundCheckPoint.position, circleRadius, groundLayer);
         checkingWall = Physics2D.OverlapCircle(wallCheckPoint.position, circleRadius, groundLayer);
         isGrounded = Physics2D.OverlapBox(groundCheck.position, boxSize, 0, groundLayer);
-        canSeePlayer = Physics2D.OverlapBox(transform.position, lineOfSite, 0, playerLayer);
+        // canSeePlayer = (Vector2.Distance(transform.position, player.position) <= aggroDistance);
+
+        float distToPlayer = Vector2.Distance(transform.position, player.position);
+        canSeePlayer = (distToPlayer <= aggroDistance);
+
         AnimationController();
 
         if (!canSeePlayer && isGrounded)
@@ -72,11 +78,11 @@ public class JumpEnemyAttacker : MonoBehaviour
 
     public void JumpAttack()
     {
-        Vector2.Distance(player.position, transform.position);
+        float distanceFromPlayer = player.position.x - transform.position.x;
 
         if (isGrounded)
         {
-            //enemyRB.AddForce(new Vector2(facingRight, jumpHeight), ForceMode2D.Impulse);
+            enemyRB.AddForce(new Vector2(distanceFromPlayer, jumpHeight), ForceMode2D.Impulse);
         }
     }
 
@@ -103,6 +109,18 @@ public class JumpEnemyAttacker : MonoBehaviour
     public void AnimationController()
     {
         enemyAnim.SetBool("CanSeePlayer", canSeePlayer);
-        enemyAnim.SetBool("IsGrounded", canSeePlayer);
+        enemyAnim.SetBool("IsGrounded", isGrounded);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(groundCheckPoint.position, circleRadius);
+        Gizmos.DrawWireSphere(wallCheckPoint.position, circleRadius);
+        Gizmos.color = Color.green;
+        Gizmos.DrawCube(groundCheck.position, boxSize);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, aggroDistance);
+
     }
 }
