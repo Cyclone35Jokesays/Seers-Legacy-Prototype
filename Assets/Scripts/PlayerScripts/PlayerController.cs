@@ -6,28 +6,28 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     public Blaster blaster;
-
-    public float speed;
-    public float jumpForce;
+    [Header("Movement")]
+    [SerializeField] float speed;
+    [SerializeField] float jumpForce;
     private float moveInput;
     private Rigidbody2D rb;
 
+    [Header("Ground Touching")]
     private bool isGrounded;
-    public Transform groundCheck;
-    public float checkRadius;
-    public LayerMask whatIsGround;
+    [SerializeField] Transform groundCheck;
+    [SerializeField] float checkRadius;
+    [SerializeField] LayerMask whatIsGround;
 
+    [Header("DoubleJump")]
     private int extraJumps;
     public int extraJumpValue;
-
     private float jumpTimeCounter;
-    public float jumpTime;
+    [SerializeField] float jumpTime;
     bool isJumping;
 
-    public ParticleSystem dust;
-    
-    public Animator anim;
-
+    [Header("Misc")]
+    [SerializeField] ParticleSystem dust;   
+    [SerializeField] Animator anim;
     private GameMaster gm; 
 
     private void Awake()

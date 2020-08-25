@@ -22,8 +22,7 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-       // StartCoroutine("ReloadLevel");
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));        
     }
 
     IEnumerator LoadLevel(int levelIndex)
@@ -36,13 +35,4 @@ public class LevelLoader : MonoBehaviour
         yield return new WaitForSeconds(transitionTime + 0.3f);
         transform.position = gm.lastCheckPointPos;
     }
-
-   /* IEnumerator ReloadLevel(bool setLoad)
-    {
-        yield return new WaitForSeconds(transitionTime + 0.7f);
-        setLoad = false;
-        transform.position = gm.lastCheckPointPos;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        setLoad = true;
-    } */
 }
