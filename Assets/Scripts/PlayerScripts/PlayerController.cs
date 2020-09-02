@@ -18,6 +18,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float checkRadius;
     [SerializeField] LayerMask whatIsGround;
 
+    [Header("WallJumping")]
+    public Transform wallGrabPoint;
+    private bool canGrab, isGrabbing;
+    private float gravityStore;
+    [SerializeField] float wallJumpTime = .2f;
+    private float wallJumpCounter;
+
     [Header("DoubleJump")]
     private int extraJumps;
     public int extraJumpValue;
@@ -39,7 +46,7 @@ public class PlayerController : MonoBehaviour
     {
         extraJumps = extraJumpValue;
         rb = GetComponent<Rigidbody2D>();
-
+        gravityStore = rb.gravityScale;
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
     }
 
@@ -83,55 +90,94 @@ public class PlayerController : MonoBehaviour
             CreateDust();
         }
 
-        if (Input.GetKeyDown(KeyCode.R))
-         {
-             transform.position = gm.lastCheckPointPos;
-             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-         } 
+        if (wallJumpCounter <= 0)
+        {     
+            /* if (Input.GetKeyDown(KeyCode.R))
+              {
+                  transform.position = gm.lastCheckPointPos;
+                  SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+              } */
 
-        if (isGrounded == true)
-        {
-            extraJumps = extraJumpValue;
-            anim.SetBool("IsJumping", false);
-        }
-        if (isGrounded == false)
-        {
-            anim.SetBool("IsJumping", true);
-        }
+            if (isGrounded == true)
+            {
+                extraJumps = extraJumpValue;
+                anim.SetBool("IsJumping", false);
+            }
+            if (isGrounded == false)
+            {
+                anim.SetBool("IsJumping", true);
+            }
 
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
-        {
-            isJumping = true;
-            jumpTimeCounter = jumpTime;
-            rb.velocity = Vector2.up * jumpForce;
-            SoundManager.PlaySound("Jump");
+            if (Input.GetKeyDown(KeyCode.W) && isGrounded)
+            {
+                isJumping = true;
+                jumpTimeCounter = jumpTime;
+                rb.velocity = Vector2.up * jumpForce;
+                SoundManager.PlaySound("Jump");
+            }
 
-        }
-
-        else if (Input.GetKeyDown(KeyCode.W) && extraJumps > 0)
-        {
-            rb.velocity = Vector2.up * jumpForce;
-            jumpTimeCounter = jumpTime;
-            extraJumps--;
-        }
-
-        if (Input.GetKey(KeyCode.W) && isJumping)
-        {
-            if (jumpTimeCounter > 0)
+            else if (Input.GetKeyDown(KeyCode.W) && extraJumps > 0)
             {
                 rb.velocity = Vector2.up * jumpForce;
-                jumpTimeCounter -= Time.deltaTime;
+                jumpTimeCounter = jumpTime;
+                extraJumps--;
             }
-            else
+
+            if (Input.GetKey(KeyCode.W) && isJumping)
+            {
+                if (jumpTimeCounter > 0)
+                {
+                    rb.velocity = Vector2.up * jumpForce;
+                    jumpTimeCounter -= Time.deltaTime;
+                }
+                else
+                {
+                    isJumping = false;
+                }
+            }
+
+            if (Input.GetKeyUp(KeyCode.W))
             {
                 isJumping = false;
             }
+
+            canGrab = Physics2D.OverlapCircle(wallGrabPoint.position, .2f, whatIsGround);
+
+            isGrabbing = false;
+            if (canGrab && !isGrounded)
+            {
+                if ((transform.localScale.x == 1f && Input.GetAxisRaw("Horizontal") > 0) || (transform.localScale.x == -1f && Input.GetAxisRaw("Horizontal") < 0))
+                {
+                    isGrabbing = true;
+                }
+            }
+
+            if (isGrabbing)
+            {
+                rb.gravityScale = 0f;
+                rb.velocity = Vector2.zero;
+
+                if (Input.GetKeyDown(KeyCode.W))
+                {
+                    wallJumpCounter = wallJumpTime;
+
+                    rb.velocity = new Vector2(-Input.GetAxisRaw("Horizontal") * speed, jumpForce);
+                    rb.gravityScale = gravityStore;
+                    isGrabbing = false;
+                }
+            }
+
+            else
+            {
+                rb.gravityScale = gravityStore;
+            }
         }
 
-        if (Input.GetKeyUp(KeyCode.W))
+        else
         {
-            isJumping = false;
-        }       
+            wallJumpCounter -= Time.deltaTime;
+        }
+        anim.SetBool("IsGrabbing", isGrabbing);
     }
 
     public IEnumerator Knockback(float knockDuration, float knockPower, Vector2 knockbackDirection)

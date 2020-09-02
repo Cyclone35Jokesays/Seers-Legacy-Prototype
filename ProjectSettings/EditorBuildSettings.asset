@@ -45,6 +45,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/MapLevels/Alpha11.unity
     guid: 182887188a2c0734d890e88cbd00b2c1
   - enabled: 1
+    path: Assets/Scenes/Levels/MapLevels/Alpha12.unity
+    guid: cfb818cb3e8fc2d48950404a20e1904a
+  - enabled: 1
+    path: Assets/Scenes/Levels/MapLevels/Aplha13.unity
+    guid: ccdab4f57293da24d992dc7594fe010f
+  - enabled: 1
     path: Assets/Scenes/Ending.unity
     guid: 57489d74dc7dfed4ba77f69d48a0b5cd
   m_configObjects: {}

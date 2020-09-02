@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Transform player;
+
+    private void Start()
     {
-        
+        player = GameManager.Instance.player.transform;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
         
     }

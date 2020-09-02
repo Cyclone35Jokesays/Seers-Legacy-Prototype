@@ -4754,6 +4754,36 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!1 &1359410242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1359410243}
+  m_Layer: 12
+  m_Name: WallGrabPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1359410243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359410242}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.7, y: -9.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7438225584342273225}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1428738783
 GameObject:
   m_ObjectHideFlags: 0
@@ -5126,7 +5156,6 @@ GameObject:
   - component: {fileID: 7438225584342273223}
   - component: {fileID: 7438225584342273222}
   - component: {fileID: 4257768094960760004}
-  - component: {fileID: 713489492}
   - component: {fileID: 635891047}
   - component: {fileID: 3613169777030123469}
   m_Layer: 12
@@ -5152,6 +5181,7 @@ Transform:
   - {fileID: 1428738786}
   - {fileID: 8941191549077824620}
   - {fileID: 933902945}
+  - {fileID: 1359410243}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5196,6 +5226,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  wallGrabPoint: {fileID: 1359410243}
   extraJumpValue: 0
   jumpTime: 0.35
   dust: {fileID: 933902943}
@@ -5216,25 +5247,6 @@ CapsuleCollider2D:
   m_Offset: {x: -4.029014, y: -6.8921137}
   m_Size: {x: 39.2, y: 60.4}
   m_Direction: 0
---- !u!95 &713489492
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7438225584342273221}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d8760016be41b014a9c6c38498c941e5, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &635891047
 MonoBehaviour:
   m_ObjectHideFlags: 0
