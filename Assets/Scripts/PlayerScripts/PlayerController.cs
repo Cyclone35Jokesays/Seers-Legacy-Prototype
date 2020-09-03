@@ -12,6 +12,14 @@ public class PlayerController : MonoBehaviour
     private float moveInput;
     private Rigidbody2D rb;
 
+    public enum PlayerState
+    {
+        idleState,
+        runState,
+        JumpState,
+        WallGrabState
+    }
+    
     [Header("Ground Touching")]
     private bool isGrounded;
     [SerializeField] Transform groundCheck;
@@ -146,7 +154,9 @@ public class PlayerController : MonoBehaviour
             isGrabbing = false;
             if (canGrab && !isGrounded)
             {
-                if ((transform.localScale.x == 1f && Input.GetAxisRaw("Horizontal") > 0) || (transform.localScale.x == -1f && Input.GetAxisRaw("Horizontal") < 0))
+                float localYRot = transform.localRotation.eulerAngles.y;
+                float horizontalInputDir = Input.GetAxisRaw("Horizontal");
+                if ((localYRot == 0 && horizontalInputDir > 0) || (localYRot == 180 && horizontalInputDir < 0))
                 {
                     isGrabbing = true;
                 }
@@ -166,7 +176,6 @@ public class PlayerController : MonoBehaviour
                     isGrabbing = false;
                 }
             }
-
             else
             {
                 rb.gravityScale = gravityStore;

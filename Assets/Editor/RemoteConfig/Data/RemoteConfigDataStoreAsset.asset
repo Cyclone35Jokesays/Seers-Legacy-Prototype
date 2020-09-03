@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
+  m_Name: RemoteConfigDataStoreAsset
+  m_EditorClassIdentifier: 
+  rsKeyList:
+  - metadata:
+      entityId: 265b52b4-ea94-44a4-b58a-e4bdcdf59738
+    rs:
+      key: Setting0
+      type: 
+      value: 
+  rsLastCachedKeyList: []
+  configId: 
+  currentEnvironmentId: 
+  environments: []
+  rulesList:
+  - id: 9a76270d-b295-4a44-a454-9604550adb55
+    name: New Rule
+    enabled: 0
+    priority: 1000
+    type: 
+    condition: 
+    rolloutPercentage: 100
+    value: []
+    startDate: 
+    endDate: 
+  lastCachedRulesList: []
+  addedRulesIDs:
+  - 9a76270d-b295-4a44-a454-9604550adb55
+  updatedRulesIDs: []
+  deletedRulesIDs: []
