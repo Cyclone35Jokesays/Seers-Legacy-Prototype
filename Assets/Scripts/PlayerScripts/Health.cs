@@ -19,7 +19,7 @@ public class Health : MonoBehaviour
     private void Awake()
     {
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        player = GameManager.Instance.player.GetComponent<PlayerController>();
     }
 
     private void Update()
@@ -69,7 +69,7 @@ public class Health : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             health -= 1;
-            StartCoroutine(player.Knockback(0.015f, 400, player.transform.position));
+            StartCoroutine(player.Knockback(0.01f, 400, player.transform.position));
 
             if (health <= 0)
             {
@@ -82,7 +82,7 @@ public class Health : MonoBehaviour
         if (collision.gameObject.tag == "Boss")
         {
             health -= 1;
-            StartCoroutine(player.Knockback(0.015f, 400, player.transform.position));
+            StartCoroutine(player.Knockback(0.01f, 400, player.transform.position));
 
             if (health <= 0)
             {

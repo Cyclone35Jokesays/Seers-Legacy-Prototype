@@ -45,7 +45,6 @@ public class JumpEnemyAttacker : MonoBehaviour
         checkingGround = Physics2D.OverlapCircle(groundCheckPoint.position, circleRadius, groundLayer);
         checkingWall = Physics2D.OverlapCircle(wallCheckPoint.position, circleRadius, groundLayer);
         isGrounded = Physics2D.OverlapBox(groundCheck.position, boxSize, 0, groundLayer);
-        // canSeePlayer = (Vector2.Distance(transform.position, player.position) <= aggroDistance);
 
         float distToPlayer = Vector2.Distance(transform.position, player.position);
         canSeePlayer = (distToPlayer <= aggroDistance);

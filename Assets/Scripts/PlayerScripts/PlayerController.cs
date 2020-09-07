@@ -19,10 +19,12 @@ public class PlayerController : MonoBehaviour
         JumpState,
         WallGrabState
     }
+
+    PlayerState playerState;
     
     [Header("Ground Touching")]
     private bool isGrounded;
-    [SerializeField] Transform groundCheck;
+    public Transform groundCheck;
     [SerializeField] float checkRadius;
     [SerializeField] LayerMask whatIsGround;
 
@@ -43,7 +45,8 @@ public class PlayerController : MonoBehaviour
     [Header("Misc")]
     [SerializeField] ParticleSystem dust;   
     [SerializeField] Animator anim;
-    private GameMaster gm; 
+    private GameMaster gm;
+    public GameObject DJEffect;
 
     private void Awake()
     {
@@ -128,6 +131,7 @@ public class PlayerController : MonoBehaviour
             {
                 rb.velocity = Vector2.up * jumpForce;
                 jumpTimeCounter = jumpTime;
+                Instantiate(DJEffect, transform.position, transform.rotation);
                 extraJumps--;
             }
 

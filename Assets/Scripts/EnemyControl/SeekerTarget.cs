@@ -5,7 +5,7 @@ using UnityEngine;
 public class SeekerTarget : MonoBehaviour
 {
     private float timeBtwShots;
-    public float startTimeBtwShots;
+    [SerializeField] float startTimeBtwShots;
 
     public GameObject projectile;
 

@@ -5219,7 +5219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blaster: {fileID: 1428738784}
-  speed: 6
+  speed: 6.3
   jumpForce: 9
   groundCheck: {fileID: 7438225583457520372}
   checkRadius: 0.1
@@ -5232,6 +5232,8 @@ MonoBehaviour:
   jumpTime: 0.35
   dust: {fileID: 933902943}
   anim: {fileID: 7763749358428937529}
+  DJEffect: {fileID: 4163995464382387932, guid: 7ac91657b2bd7e34880399b1628ecae8,
+    type: 3}
 --- !u!70 &4257768094960760004
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int health;
+    [SerializeField] int health;
     public GameObject deathEffect;
     public GameObject Health;
     

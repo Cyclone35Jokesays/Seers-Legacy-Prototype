@@ -22,7 +22,7 @@ public class FlyingBoss : MonoBehaviour
     [SerializeField] Transform groundCheckUp;
     [SerializeField] Transform groundCheckDown;
     [SerializeField] Transform groundCheckWall;
-    [SerializeField] float groundCheckRadius;
+    public float groundCheckRadius;
     [SerializeField] LayerMask groundLayer;
     private bool isTouchingUp;
     private bool isTouchingDown;
