@@ -69,6 +69,7 @@ public class Health : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             health -= 1;
+            player.MethodThatTriggersInvulnerability();
 
             if (health <= 0)
             {
@@ -81,6 +82,7 @@ public class Health : MonoBehaviour
         if (collision.gameObject.tag == "Boss")
         {
             health -= 1;
+            player.MethodThatTriggersInvulnerability();
 
             if (health <= 0)
             {
@@ -95,6 +97,8 @@ public class Health : MonoBehaviour
     {
         if (collision.gameObject.tag == "Obstacle")
         {
+            player.MethodThatTriggersInvulnerability();
+
             if (health <= 0)
             {
                 restartHP();

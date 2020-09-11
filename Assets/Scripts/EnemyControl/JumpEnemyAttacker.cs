@@ -5,28 +5,40 @@ using UnityEngine;
 public class JumpEnemyAttacker : MonoBehaviour
 {
     [Header("For Petrolling")]
-    [SerializeField] float moveSpeed;
+    [SerializeField]
+    public float moveSpeed;
     private float moveDirection = 1;
     private bool facingRight = true;
-    [SerializeField] Transform groundCheckPoint;
-    [SerializeField] Transform wallCheckPoint;
-    [SerializeField] float circleRadius;
-    [SerializeField] LayerMask groundLayer;
+    [SerializeField]
+    public Transform groundCheckPoint;
+    [SerializeField]
+    public Transform wallCheckPoint;
+    [SerializeField]
+    public float circleRadius;
+    [SerializeField]
+    public LayerMask groundLayer;
     private bool checkingGround;
     private bool checkingWall;
 
     [Header("For JumpAttacking")]
-    [SerializeField] float jumpHeight;
+    [SerializeField]
+    public float jumpHeight;
 
-    [SerializeField] Transform player;
-    [SerializeField] Transform groundCheck;
-    [SerializeField] Vector2 boxSize;
+    [SerializeField]
+    public Transform player;
+    [SerializeField]
+    public Transform groundCheck;
+    [SerializeField]
+    public Vector2 boxSize;
     private bool isGrounded;
 
     [Header("For SeeingPlayer")]
-    [SerializeField] Vector2 lineOfSite;
-    [SerializeField] LayerMask playerLayer;
-    [SerializeField] float aggroDistance = 10.0f;
+    [SerializeField]
+    public Vector2 lineOfSite;
+    [SerializeField]
+    public LayerMask playerLayer;
+    [SerializeField]
+    public float aggroDistance = 9.0f;
     private bool canSeePlayer;
 
     [Header("Other")]

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DoorHolder : MonoBehaviour
 {
-    [SerializeField] private KeyScript.KeyType keyType;
+    [SerializeField]
+    private KeyScript.KeyType keyType;
 
     public KeyScript.KeyType GetKeyType()
     {

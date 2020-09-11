@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class EnemyPathfinding : MonoBehaviour
 {
-    [SerializeField] float speed;
-    [SerializeField] float distance;
+    [SerializeField]
+    public float speed;
+    [SerializeField]
+    public float distance;
     public Animator anim;
 
     private bool movingRight = true;
 
-    [SerializeField] Transform groundDetection;
+    [SerializeField]
+    public Transform groundDetection;
 
     private void Update()
     {

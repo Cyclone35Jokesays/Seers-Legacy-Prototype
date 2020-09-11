@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class KeyScript : MonoBehaviour
 {
-    [SerializeField] private KeyType keyType;
+    [SerializeField]
+    private KeyType keyType;
 
     private void Update()
     {

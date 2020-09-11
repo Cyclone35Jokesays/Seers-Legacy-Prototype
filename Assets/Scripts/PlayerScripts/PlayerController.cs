@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
         WallGrabState
     }
 
-    PlayerState playerState;
+    public PlayerState playerState;
     
     [Header("Ground Touching")]
     private bool isGrounded;
@@ -63,6 +63,11 @@ public class PlayerController : MonoBehaviour
     private float knockbackSpeedX, knockbackSpeedY, knockbackDuration;
     private bool knockback;
     private float knockbackStart;
+
+    [Header("Invincible")]
+    private bool isInvincible = false;
+    [SerializeField]
+    private float invincibilityDurationSeconds;
 
     private void Awake()
     {
@@ -238,7 +243,24 @@ public class PlayerController : MonoBehaviour
             knockback = false;
             rb.velocity = new Vector2(0.0f, rb.velocity.y);
         }
-    }    
+    }
+
+    private IEnumerator BecomeTemporarilyInvincible()
+    {
+        isInvincible = true;
+
+        yield return new WaitForSeconds(invincibilityDurationSeconds);
+
+        isInvincible = false;
+    }
+
+    public void MethodThatTriggersInvulnerability()
+    {
+        if (!isInvincible)
+        {
+            StartCoroutine(BecomeTemporarilyInvincible());
+        }
+    }
 }
 /*public IEnumerator Knockback(float knockDuration, float knockPower, Vector2 knockbackDirection)
     {

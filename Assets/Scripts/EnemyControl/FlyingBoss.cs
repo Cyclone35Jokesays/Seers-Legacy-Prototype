@@ -5,25 +5,34 @@ using UnityEngine;
 public class FlyingBoss : MonoBehaviour
 {
     [Header("Idle")]
-    [SerializeField] float idleMoveSpeed;
-    [SerializeField] Vector2 idleMoveDirection;
+    [SerializeField]
+    public float idleMoveSpeed;
+    [SerializeField]
+    public Vector2 idleMoveDirection;
 
     [Header("AttackUpDown")]
-    [SerializeField] float attackMoveSpeed;
+    [SerializeField]
+    public float attackMoveSpeed;
     [SerializeField] Vector2 attackMoveDirection;
 
     [Header("AttackPlayer")]
-    [SerializeField] float attackPlayerSpeed;
-    [SerializeField] Transform player;
+    [SerializeField]
+    public float attackPlayerSpeed;
+    [SerializeField]
+    public Transform player;
     private Vector2 playerPosition;
     private bool hasPlayerPosition;
 
     [Header("Other")]
-    [SerializeField] Transform groundCheckUp;
-    [SerializeField] Transform groundCheckDown;
-    [SerializeField] Transform groundCheckWall;
+    [SerializeField]
+    public Transform groundCheckUp;
+    [SerializeField]
+    public Transform groundCheckDown;
+    [SerializeField]
+    public Transform groundCheckWall;
     public float groundCheckRadius;
-    [SerializeField] LayerMask groundLayer;
+    [SerializeField]
+    public LayerMask groundLayer;
     private bool isTouchingUp;
     private bool isTouchingDown;
     private bool isTouchingWall;

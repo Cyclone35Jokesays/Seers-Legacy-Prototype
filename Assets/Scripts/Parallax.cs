@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    [SerializeField] private Vector2 parallaxEffectMultiplier;
-    [SerializeField] private bool infiniteHorizontal;
-    [SerializeField] private bool infiniteVertical;
+    [SerializeField]
+    private Vector2 parallaxEffectMultiplier;
+    [SerializeField]
+    private bool infiniteHorizontal;
+    [SerializeField]
+    private bool infiniteVertical;
     private Transform cameraTransform;
     private Vector3 lastCameraPosition;
     private float textureUnitSizeX;
