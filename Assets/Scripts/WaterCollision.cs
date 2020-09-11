@@ -6,13 +6,16 @@ using UnityEngine.SceneManagement;
 public class WaterCollision : MonoBehaviour
 {
     private Health damage;
-    private PlayerController play;
-    
+    private PlayerController play;   
 
     private void Awake()
+    {       
+        damage = GameManager.Instance.player.GetComponent<Health>();
+    }
+
+    private void Start()
     {
         play = GameManager.Instance.player.GetComponent<PlayerController>();
-        damage = GameManager.Instance.player.GetComponent<Health>();
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -20,7 +23,7 @@ public class WaterCollision : MonoBehaviour
         if (col.CompareTag("Player"))
         {
             damage.takeDamage();
-            StartCoroutine(play.Knockback(0.01f, 400, play.transform.position));
+           // StartCoroutine(play.Knockback(0.01f, 400, play.transform.position));
         }
 
 

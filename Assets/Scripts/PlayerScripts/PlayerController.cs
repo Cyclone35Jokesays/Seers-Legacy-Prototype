@@ -7,8 +7,10 @@ public class PlayerController : MonoBehaviour
 {
     public Blaster blaster;
     [Header("Movement")]
-    [SerializeField] float speed;
-    [SerializeField] float jumpForce;
+    [SerializeField]
+    public float speed;
+    [SerializeField]
+    public float jumpForce;
     private float moveInput;
     private Rigidbody2D rb;
 
@@ -25,8 +27,10 @@ public class PlayerController : MonoBehaviour
     [Header("Ground Touching")]
     private bool isGrounded;
     public Transform groundCheck;
-    [SerializeField] float checkRadius;
-    [SerializeField] LayerMask whatIsGround;
+    [SerializeField]
+    public float checkRadius;
+    [SerializeField]
+    public LayerMask whatIsGround;
 
     [Header("WallJumping")]
     public Transform wallGrabPoint;
@@ -39,18 +43,31 @@ public class PlayerController : MonoBehaviour
     private int extraJumps;
     public int extraJumpValue;
     private float jumpTimeCounter;
-    [SerializeField] float jumpTime;
+    [SerializeField]
+    public float jumpTime;
     bool isJumping;
 
     [Header("Misc")]
-    [SerializeField] ParticleSystem dust;   
-    [SerializeField] Animator anim;
+    [SerializeField]
+    public ParticleSystem dust;   
+    [SerializeField]
+    private Animator anim;
     private GameMaster gm;
     public GameObject DJEffect;
+    private Health HP;
+
+    [Header("KnockBack")]
+    [SerializeField]
+    private bool applyKnockback;
+    [SerializeField]
+    private float knockbackSpeedX, knockbackSpeedY, knockbackDuration;
+    private bool knockback;
+    private float knockbackStart;
 
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        GameManager.Instance.player = gameObject;
     }
 
     private void Start()
@@ -59,6 +76,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         gravityStore = rb.gravityScale;
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+        HP = GetComponent<Health>();
     }
 
     private void FixedUpdate()
@@ -92,23 +110,34 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+        switch (playerState)
         {
-            CreateDust();
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            CreateDust();
+            case PlayerState.idleState:
+                break;
+            case PlayerState.runState:
+
+                void CreateDust()
+                {
+                    dust.Play();
+                }
+
+                if (Input.GetKey(KeyCode.A))
+                {
+                    CreateDust();
+                }
+                if (Input.GetKey(KeyCode.D))
+                {
+                    CreateDust();
+                }
+                break;
+            case PlayerState.JumpState:
+                break;
+            case PlayerState.WallGrabState:
+                break;               
         }
 
         if (wallJumpCounter <= 0)
         {     
-            /* if (Input.GetKeyDown(KeyCode.R))
-              {
-                  transform.position = gm.lastCheckPointPos;
-                  SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-              } */
-
             if (isGrounded == true)
             {
                 extraJumps = extraJumpValue;
@@ -191,9 +220,27 @@ public class PlayerController : MonoBehaviour
             wallJumpCounter -= Time.deltaTime;
         }
         anim.SetBool("IsGrabbing", isGrabbing);
+
+        CheckKnockback();
     }
 
-    public IEnumerator Knockback(float knockDuration, float knockPower, Vector2 knockbackDirection)
+    public void KnockBack()
+    {
+        knockback = true;
+        knockbackStart = Time.time;
+        rb.velocity = new Vector2(knockbackSpeedX, knockbackSpeedY);
+    }
+
+    public void CheckKnockback()
+    {
+        if (Time.time >= knockbackStart + knockbackDuration && knockback)
+        {
+            knockback = false;
+            rb.velocity = new Vector2(0.0f, rb.velocity.y);
+        }
+    }    
+}
+/*public IEnumerator Knockback(float knockDuration, float knockPower, Vector2 knockbackDirection)
     {
         float timer = 0;
         rb.velocity = new Vector2(rb.velocity.x, 0);
@@ -203,10 +250,4 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(new Vector2(knockbackDirection.x * -100, knockbackDirection.y + knockPower));
         }
         yield return 0;
-    }
-
-    void CreateDust()
-    {
-        dust.Play();
-    }
-}
+    }   */

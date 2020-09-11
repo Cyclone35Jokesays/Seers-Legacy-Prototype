@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3363799560379742958}
   - component: {fileID: 233716910867516779}
   - component: {fileID: 1214081146097458017}
-  - component: {fileID: 1393224779075883123}
+  - component: {fileID: -8979266038988236411}
   m_Layer: 0
   m_Name: Point
   m_TagString: Untagged
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e7bc1a619076947c3b3bb3d4a577127e, type: 3}
-  m_Color: {r: 1, g: 0.9495409, b: 0.2216981, a: 1}
+  m_Color: {r: 0, g: 0.6509434, b: 0.364144, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -120,7 +120,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.4
---- !u!114 &1393224779075883123
+--- !u!114 &-8979266038988236411
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,11 +129,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3944608262180696609}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e205c4ce92689243884f047d6177275, type: 3}
+  m_Script: {fileID: 11500000, guid: c5ab30d477b3585429a515eabf8148c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
-  theScore: 0
+  speed: 4
 --- !u!1 &4669904178225160636
 GameObject:
   m_ObjectHideFlags: 0

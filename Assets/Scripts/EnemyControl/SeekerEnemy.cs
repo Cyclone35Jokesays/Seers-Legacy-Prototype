@@ -16,7 +16,7 @@ public class SeekerEnemy : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameManager.Instance.player.transform;
         timeBtwShots = startTimeBtwShots;
     }
 

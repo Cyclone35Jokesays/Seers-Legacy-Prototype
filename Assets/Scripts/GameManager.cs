@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance = null;
 
     public GameObject player;
+    public Vector2 lastCheckPointPos;
 
     private void Awake()
     {

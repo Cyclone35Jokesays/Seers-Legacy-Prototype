@@ -16,9 +16,9 @@ public class Health : MonoBehaviour
     public Sprite EmptyHeart;
     private PlayerController player;
 
-    private void Awake()
+
+    private void Start()
     {
-        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         player = GameManager.Instance.player.GetComponent<PlayerController>();
     }
 
@@ -69,12 +69,11 @@ public class Health : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             health -= 1;
-            StartCoroutine(player.Knockback(0.01f, 400, player.transform.position));
 
             if (health <= 0)
             {
                 restartHP();
-                transform.position = gm.lastCheckPointPos;
+                transform.position = GameManager.Instance.lastCheckPointPos;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);           
             }
         }
@@ -82,12 +81,11 @@ public class Health : MonoBehaviour
         if (collision.gameObject.tag == "Boss")
         {
             health -= 1;
-            StartCoroutine(player.Knockback(0.01f, 400, player.transform.position));
 
             if (health <= 0)
             {
                 restartHP();
-                transform.position = gm.lastCheckPointPos;
+                transform.position = GameManager.Instance.lastCheckPointPos;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
@@ -100,7 +98,7 @@ public class Health : MonoBehaviour
             if (health <= 0)
             {
                 restartHP();
-                transform.position = gm.lastCheckPointPos;
+                transform.position = GameManager.Instance.lastCheckPointPos;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }

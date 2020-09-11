@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] int health;
+    [SerializeField]
+    public int health;
+    [SerializeField]
     public GameObject deathEffect;
     public GameObject Health;
-    
+    private PlayerController pc;
+
+    private void Start()
+    {
+        pc = GameManager.Instance.GetComponent<PlayerController>();
+    }
+
     private void Update()
     {
         if (health <= 0)

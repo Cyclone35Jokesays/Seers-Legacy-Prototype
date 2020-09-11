@@ -33,11 +33,31 @@ public class JumpEnemyAttacker : MonoBehaviour
     private Animator enemyAnim;
     private Rigidbody2D enemyRB;
 
+    [Header("Shooting")]
+    private float timeBtwShots;
+    public float startTimeBtwShots;
+    public GameObject projectile;
+
     private void Start()
     {
         enemyRB = GetComponent<Rigidbody2D>();
         enemyAnim = GetComponent<Animator>();
+        timeBtwShots = startTimeBtwShots;
         player = GameManager.Instance.player.transform;
+    }
+
+    private void Update()
+    {
+        if (timeBtwShots <= 0)
+        {
+            Instantiate(projectile, transform.position, Quaternion.identity);
+            timeBtwShots = startTimeBtwShots;
+        }
+
+        else
+        {
+            timeBtwShots -= Time.deltaTime;
+        }
     }
 
     private void FixedUpdate()

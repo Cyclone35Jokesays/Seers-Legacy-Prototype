@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1430706965789426739}
   - component: {fileID: 1430706965789426738}
   - component: {fileID: 1430706965789426737}
+  - component: {fileID: 4359220711944874863}
   m_Layer: 9
   m_Name: ShooterEnemy
   m_TagString: Enemy
@@ -183,6 +184,27 @@ MonoBehaviour:
   startTimeBtwShots: 2.5
   projectile: {fileID: 8686834216095720108, guid: 5f7668025e4f21f4bbb026a96dc3be64,
     type: 3}
+--- !u!50 &4359220711944874863
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430706965789426736}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1430706966531105469
 GameObject:
   m_ObjectHideFlags: 0

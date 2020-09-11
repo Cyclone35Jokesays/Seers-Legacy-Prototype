@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] float speed;
-    [SerializeField] float lifeTime;
-    [SerializeField] float distance;
+    [SerializeField]
+    public float speed;
+    [SerializeField]
+    public float lifeTime;
+    [SerializeField]
+    public float distance;
     public int damage;
     public LayerMask whatIsSolid;
 
