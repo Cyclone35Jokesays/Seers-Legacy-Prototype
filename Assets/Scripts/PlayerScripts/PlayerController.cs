@@ -54,20 +54,6 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
     private GameMaster gm;
     public GameObject DJEffect;
-    private Health HP;
-
-    [Header("KnockBack")]
-    [SerializeField]
-    private bool applyKnockback;
-    [SerializeField]
-    private float knockbackSpeedX, knockbackSpeedY, knockbackDuration;
-    private bool knockback;
-    private float knockbackStart;
-
-    [Header("Invincible")]
-    private bool isInvincible = false;
-    [SerializeField]
-    private float invincibilityDurationSeconds;
 
     private void Awake()
     {
@@ -81,7 +67,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         gravityStore = rb.gravityScale;
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
-        HP = GetComponent<Health>();
     }
 
     private void FixedUpdate()
@@ -224,43 +209,9 @@ public class PlayerController : MonoBehaviour
         {
             wallJumpCounter -= Time.deltaTime;
         }
+
         anim.SetBool("IsGrabbing", isGrabbing);
-
-        CheckKnockback();
-    }
-
-    public void KnockBack()
-    {
-        knockback = true;
-        knockbackStart = Time.time;
-        rb.velocity = new Vector2(knockbackSpeedX, knockbackSpeedY);
-    }
-
-    public void CheckKnockback()
-    {
-        if (Time.time >= knockbackStart + knockbackDuration && knockback)
-        {
-            knockback = false;
-            rb.velocity = new Vector2(0.0f, rb.velocity.y);
-        }
-    }
-
-    private IEnumerator BecomeTemporarilyInvincible()
-    {
-        isInvincible = true;
-
-        yield return new WaitForSeconds(invincibilityDurationSeconds);
-
-        isInvincible = false;
-    }
-
-    public void MethodThatTriggersInvulnerability()
-    {
-        if (!isInvincible)
-        {
-            StartCoroutine(BecomeTemporarilyInvincible());
-        }
-    }
+    }   
 }
 /*public IEnumerator Knockback(float knockDuration, float knockPower, Vector2 knockbackDirection)
     {
