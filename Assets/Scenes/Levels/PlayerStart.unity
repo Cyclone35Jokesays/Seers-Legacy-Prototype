@@ -2886,6 +2886,10 @@ PrefabInstance:
       propertyPath: hearts.Array.data[6]
       value: 
       objectReference: {fileID: 1059940077}
+    - target: {fileID: 635891047, guid: 13bbb1398f2d2ef4899fdad10196e97a, type: 3}
+      propertyPath: Hurt
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7438225584342273221, guid: 13bbb1398f2d2ef4899fdad10196e97a,
         type: 3}
       propertyPath: m_Name

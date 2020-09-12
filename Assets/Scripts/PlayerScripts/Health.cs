@@ -17,6 +17,7 @@ public class Health : MonoBehaviour
     private PlayerController player;
     private Knockback KB;
     private Invincible IN;
+   // public GameObject Hurt;
 
 
     private void Start()
@@ -72,10 +73,18 @@ public class Health : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            health -= 1;
+            if (IN.IsInvincible)
+            {
 
+            }
+
+            else
+            {
+                SoundManager.PlaySound("Getting Hurt");              
+                health -= 1;
+                IN.ActivateInvulnerability();
+            }
             KB.KnockBack();
-            IN.MethodThatTriggersInvulnerability();
 
             if (health <= 0)
             {
@@ -87,7 +96,19 @@ public class Health : MonoBehaviour
 
         if (collision.gameObject.tag == "Boss")
         {
-            health -= 1;
+
+            if (IN.IsInvincible)
+            {
+
+            }
+
+            else
+            {
+                SoundManager.PlaySound("Getting Hurt");
+                health -= 1;
+                IN.ActivateInvulnerability();
+            }
+            KB.KnockBack();
 
             if (health <= 0)
             {
@@ -102,6 +123,18 @@ public class Health : MonoBehaviour
     {
         if (collision.gameObject.tag == "Obstacle")
         {
+            if (IN.IsInvincible)
+            {
+
+            }
+
+            else
+            {
+                SoundManager.PlaySound("Getting Hurt");
+                health -= 1;
+                IN.ActivateInvulnerability();
+            }
+            KB.KnockBack();
 
             if (health <= 0)
             {
