@@ -15,11 +15,15 @@ public class Health : MonoBehaviour
     public Sprite fullHeart;
     public Sprite EmptyHeart;
     private PlayerController player;
+    private Knockback KB;
+    private Invincible IN;
 
 
     private void Start()
     {
         player = GameManager.Instance.player.GetComponent<PlayerController>();
+        KB = GetComponent<Knockback>();
+        IN = GetComponent<Invincible>();
     }
 
     private void Update()
@@ -69,6 +73,9 @@ public class Health : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             health -= 1;
+
+            KB.KnockBack();
+            IN.MethodThatTriggersInvulnerability();
 
             if (health <= 0)
             {

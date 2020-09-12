@@ -5158,6 +5158,8 @@ GameObject:
   - component: {fileID: 4257768094960760004}
   - component: {fileID: 635891047}
   - component: {fileID: 3613169777030123469}
+  - component: {fileID: 3924397160802738335}
+  - component: {fileID: 419214975130545582}
   m_Layer: 12
   m_Name: Player
   m_TagString: Player
@@ -5235,11 +5237,6 @@ MonoBehaviour:
   anim: {fileID: 7763749358428937529}
   DJEffect: {fileID: 4163995464382387932, guid: 7ac91657b2bd7e34880399b1628ecae8,
     type: 3}
-  applyKnockback: 0
-  knockbackSpeedX: 1
-  knockbackSpeedY: 1
-  knockbackDuration: 1
-  invincibilityDurationSeconds: 10
 --- !u!70 &4257768094960760004
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5292,6 +5289,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 764702dd37c82a74eae46b38d32a4a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3924397160802738335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7438225584342273221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e428de650d74194ab664c7d8fc3123d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applyKnockback: 0
+  knockbackSpeedX: 50
+  knockbackSpeedY: 10
+  knockbackDuration: 2.5
+--- !u!114 &419214975130545582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7438225584342273221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cf12503d12f54d4c843a75d3566bf0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  invincibilityDurationSeconds: 3
 --- !u!1 &7975822562882663548
 GameObject:
   m_ObjectHideFlags: 0
