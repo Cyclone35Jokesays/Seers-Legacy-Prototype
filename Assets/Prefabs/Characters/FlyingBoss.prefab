@@ -267,7 +267,7 @@ MonoBehaviour:
   groundCheckUp: {fileID: 1228518013549425468}
   groundCheckDown: {fileID: 1228518012518402808}
   groundCheckWall: {fileID: 1228518013030087466}
-  groundCheckRadius: 0.25
+  groundCheckRadius: 0.3
   groundLayer:
     serializedVersion: 2
     m_Bits: 256

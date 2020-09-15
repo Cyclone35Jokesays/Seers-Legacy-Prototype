@@ -13,7 +13,8 @@ public class FlyingBoss : MonoBehaviour
     [Header("AttackUpDown")]
     [SerializeField]
     public float attackMoveSpeed;
-    [SerializeField] Vector2 attackMoveDirection;
+    [SerializeField]
+    public Vector2 attackMoveDirection;
 
     [Header("AttackPlayer")]
     [SerializeField]

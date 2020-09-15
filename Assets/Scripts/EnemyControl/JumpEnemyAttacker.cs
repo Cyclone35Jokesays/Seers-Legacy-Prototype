@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class JumpEnemyAttacker : MonoBehaviour
 {
@@ -41,12 +42,15 @@ public class JumpEnemyAttacker : MonoBehaviour
     public float aggroDistance = 9.0f;
     private bool canSeePlayer;
 
+    public BossEnemy HP;
+
     [Header("Other")]
     private Animator enemyAnim;
     private Rigidbody2D enemyRB;
 
     [Header("Shooting")]
     private float timeBtwShots;
+    [SerializeField]
     public float startTimeBtwShots;
     public GameObject projectile;
 
@@ -56,6 +60,7 @@ public class JumpEnemyAttacker : MonoBehaviour
         enemyAnim = GetComponent<Animator>();
         timeBtwShots = startTimeBtwShots;
         player = GameManager.Instance.player.transform;
+        HP = GetComponent<BossEnemy>();
     }
 
     private void Update()
@@ -69,6 +74,14 @@ public class JumpEnemyAttacker : MonoBehaviour
         else
         {
             timeBtwShots -= Time.deltaTime;
+        }
+
+        if (HP.health == 10)
+        {
+            moveSpeed = 4;
+            jumpHeight = 10;
+            aggroDistance = 10;
+            startTimeBtwShots = 1.5f;
         }
     }
 

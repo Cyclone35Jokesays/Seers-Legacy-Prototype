@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class EnemyProjectile : MonoBehaviour
 {
+    [SerializeField]
     public float speed;
+    [SerializeField]
+    public float lifeTime;
 
     private Transform player;
     private Vector2 target;
@@ -13,6 +16,7 @@ public class EnemyProjectile : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         target = new Vector2(player.position.x, player.position.y);
+        Invoke("DestroyProjectile", lifeTime);
     }
 
     void Update()

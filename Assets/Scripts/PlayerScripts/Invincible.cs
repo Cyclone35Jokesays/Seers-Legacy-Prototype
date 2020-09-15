@@ -8,9 +8,9 @@ public class Invincible : MonoBehaviour
     private bool isInvincible = false;
     private bool isOnCooldown = false;
     [SerializeField]
-    private float invincibilityCooldownSeconds;
+    private float invincibilityCooldownSeconds = 1.5f;
     [SerializeField]
-    private float invincibilityDurationSeconds;
+    private float invincibilityDurationSeconds = 3f;
    
     public bool IsInvincible { get { return isInvincible; } }
     

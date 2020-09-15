@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject player;
     public Vector2 lastCheckPointPos;
+    public List<Vector2> coordinates = new List<Vector2>();
 
     private void Awake()
     {

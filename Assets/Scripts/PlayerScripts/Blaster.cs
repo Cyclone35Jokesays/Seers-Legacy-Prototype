@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Blaster : MonoBehaviour
 {
-    [SerializeField] float offSet;
+    [SerializeField]
+    public float offSet;
     public GameObject projectile1;
     public GameObject projectile2;
     public GameObject projectile3;

@@ -172,7 +172,7 @@ Rigidbody2D:
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -214,14 +214,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c463b50324a8945affefb0cea85af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 3.2
   groundCheckPoint: {fileID: 6707565093514217122}
   wallCheckPoint: {fileID: 6707565094919511156}
   circleRadius: 0.25
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
-  jumpHeight: 7
+  jumpHeight: 8
   player: {fileID: 7438225584342273225, guid: 13bbb1398f2d2ef4899fdad10196e97a, type: 3}
   groundCheck: {fileID: 6707565094541937075}
   boxSize: {x: 0.7, y: 0.2}
@@ -229,7 +229,10 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 4096
-  aggroDistance: 9
+  aggroDistance: 9.5
+  startTimeBtwShots: 2
+  projectile: {fileID: 3944608262180696609, guid: 72ff0f3e20943fd4caa6142b5a22339e,
+    type: 3}
 --- !u!114 &-2053336921436983330
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -119503,7 +119503,7 @@ PrefabInstance:
     - target: {fileID: 5602637801133798391, guid: 5753d12a9d1ba204ba58bb2dc109a2c0,
         type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5602637801133798391, guid: 5753d12a9d1ba204ba58bb2dc109a2c0,
         type: 3}
@@ -119518,12 +119518,27 @@ PrefabInstance:
     - target: {fileID: 5602637801133798391, guid: 5753d12a9d1ba204ba58bb2dc109a2c0,
         type: 3}
       propertyPath: m_FalloffIntensity
-      value: 0.674
+      value: 0.658
       objectReference: {fileID: 0}
     - target: {fileID: 5602637801133798391, guid: 5753d12a9d1ba204ba58bb2dc109a2c0,
         type: 3}
       propertyPath: m_ShapeLightFalloffOffset.y
       value: 13.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 5602637801133798391, guid: 5753d12a9d1ba204ba58bb2dc109a2c0,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5602637801133798391, guid: 5753d12a9d1ba204ba58bb2dc109a2c0,
+        type: 3}
+      propertyPath: m_ApplyToSortingLayers.Array.data[1]
+      value: 427891473
+      objectReference: {fileID: 0}
+    - target: {fileID: 5602637801133798391, guid: 5753d12a9d1ba204ba58bb2dc109a2c0,
+        type: 3}
+      propertyPath: m_ShapeLightParametricRadius
+      value: 2.19
       objectReference: {fileID: 0}
     - target: {fileID: 6446979010002173471, guid: 5753d12a9d1ba204ba58bb2dc109a2c0,
         type: 3}
@@ -119543,7 +119558,7 @@ PrefabInstance:
     - target: {fileID: 6484267780449620128, guid: 5753d12a9d1ba204ba58bb2dc109a2c0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.9375
+      value: 1.1953125
       objectReference: {fileID: 0}
     - target: {fileID: 8194016176417710325, guid: 5753d12a9d1ba204ba58bb2dc109a2c0,
         type: 3}
