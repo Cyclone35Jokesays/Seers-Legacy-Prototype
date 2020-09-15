@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7791248, g: 1, b: 0.7311321, a: 1}
+  m_Color: {r: 0.8632076, g: 1, b: 0.8666256, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -898,7 +898,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1134506064}
-  - component: {fileID: 1134506063}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -906,18 +905,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1134506063
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1134506062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c154e2e747ff99429197c7bbfb6cd3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1134506064
 Transform:
   m_ObjectHideFlags: 0
@@ -983,7 +970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.36728466, g: 1, b: 0, a: 0.7058824}
+  m_Color: {r: 0.36728466, g: 1, b: 0, a: 0.5803922}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:

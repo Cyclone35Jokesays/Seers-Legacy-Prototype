@@ -173,7 +173,7 @@ MonoBehaviour:
   m_ApplyToSortingLayers: 00000000111b8119
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
-  m_LightOrder: 0
+  m_LightOrder: 5
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
   m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: -0.14, y: 0}
+  m_ShapeLightFalloffOffset: {x: -0.14, y: 5.05}
   m_ShapePath:
   - {x: -1.4723601, y: -0.86943793, z: 0}
   - {x: 1.5307016, y: -0.88888127, z: 0}
@@ -69753,7 +69753,7 @@ MonoBehaviour:
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
   m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: -0.14, y: 0}
+  m_ShapeLightFalloffOffset: {x: -0.14, y: 5.49}
   m_ShapePath:
   - {x: -1.4723601, y: -0.86943793, z: 0}
   - {x: 1.5307016, y: -0.88888127, z: 0}
@@ -69767,7 +69767,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511787197}
   m_LocalRotation: {x: -0, y: -0, z: 0.70710677, w: 0.7071068}
-  m_LocalPosition: {x: 62.18, y: -25.57, z: 0}
+  m_LocalPosition: {x: 65.68, y: -25.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -69957,7 +69957,7 @@ MonoBehaviour:
   m_ApplyToSortingLayers: 00000000111b8119
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
-  m_LightOrder: 0
+  m_LightOrder: 5
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0

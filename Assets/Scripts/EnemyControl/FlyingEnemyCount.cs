@@ -6,7 +6,7 @@ public class FlyingEnemyCount : MonoBehaviour
 {
     public int health;
     public GameObject deathEffect;
-    public GameObject Health;
+    public GameObject powerUp;
     public GameObject block;
 
     private void Update()
@@ -14,7 +14,7 @@ public class FlyingEnemyCount : MonoBehaviour
         if (health <= 0)
         {
             Instantiate(deathEffect, transform.position, Quaternion.identity);
-            Instantiate(Health, transform.position, Quaternion.identity);
+            Instantiate(powerUp, transform.position, Quaternion.identity);
             Destroy(gameObject);
             Destroy(block);
         }

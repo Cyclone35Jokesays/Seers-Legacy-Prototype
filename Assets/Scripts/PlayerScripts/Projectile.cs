@@ -30,13 +30,20 @@ public class Projectile : MonoBehaviour
             if (hitInfo.collider.CompareTag("Enemy"))
             {
                 hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);
-              
+
             }
 
             if (hitInfo.collider.CompareTag("Boss"))
             {
                 hitInfo.collider.GetComponent<BossEnemy>().TakeDamage(damage);
             }
+
+            if (hitInfo.collider.CompareTag("FlyingBoss"))
+            {
+                hitInfo.collider.GetComponent<FlyingEnemyCount>().TakeDamage(damage);
+
+            }
+
             DestroyProjectile();
         }
 
