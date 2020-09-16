@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b063e1181427fd744a3e2bf18a1980b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeBtwShots: 0
   startTimeBtwShots: 2.5
   projectile: {fileID: 8686834216095720108, guid: 5f7668025e4f21f4bbb026a96dc3be64,
     type: 3}
@@ -192,7 +193,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430706965789426736}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

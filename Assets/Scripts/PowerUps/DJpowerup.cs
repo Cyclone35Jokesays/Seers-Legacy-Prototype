@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class DJpowerup : MonoBehaviour, ICollectible
 {
-    public Animator anim;
+   // public Animator anim;
     private Vector2 loc;
 
     public event Action<GameObject> OnCollected;
