@@ -660,7 +660,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 497710678}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -101840,7 +101840,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e7f131618cfb374b8dd0ae5b0f94bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelIndex: 0
   transition: {fileID: 497710679}
+  levelPowerUps: []
 --- !u!61 &1343748583
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -102558,7 +102560,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 348b7b608f0e16643bdd354c1e57a131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelIndex: 0
   transition: {fileID: 497710679}
+  levelPowerUps: []
 --- !u!61 &1572480514
 BoxCollider2D:
   m_ObjectHideFlags: 0

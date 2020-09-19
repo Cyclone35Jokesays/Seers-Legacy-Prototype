@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class KeyScript : MonoBehaviour, ICollectible
+public class KeyScript : MonoBehaviour
 {
     [SerializeField]
     private KeyType keyType;
-    public event Action<GameObject> OnCollected;
-    private Vector2 loc;
+   // public event Action<GameObject> OnCollected;
+    //private Vector2 loc;
 
     private void Update()
     {

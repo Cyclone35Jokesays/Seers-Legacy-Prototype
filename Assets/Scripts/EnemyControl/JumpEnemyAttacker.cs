@@ -78,9 +78,9 @@ public class JumpEnemyAttacker : MonoBehaviour
 
         if (HP.health == 10)
         {
-            moveSpeed = 4;
-            jumpHeight = 10;
-            aggroDistance = 10;
+            moveSpeed = 4.2f;
+            jumpHeight = 12;
+            aggroDistance = 10.5f;
             startTimeBtwShots = 1.5f;
         }
     }

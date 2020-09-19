@@ -145,6 +145,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -258,16 +259,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f60354a26a88304ca801ac3bb5ee673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleMoveSpeed: 3
+  idleMoveSpeed: 3.5
   idleMoveDirection: {x: -1, y: 2}
-  attackMoveSpeed: 8
+  attackMoveSpeed: 9
   attackMoveDirection: {x: -1, y: 5}
   attackPlayerSpeed: 10
   player: {fileID: 7438225584342273225, guid: 13bbb1398f2d2ef4899fdad10196e97a, type: 3}
   groundCheckUp: {fileID: 1228518013549425468}
   groundCheckDown: {fileID: 1228518012518402808}
   groundCheckWall: {fileID: 1228518013030087466}
-  groundCheckRadius: 0.3
+  groundCheckRadius: 0.35
   groundLayer:
     serializedVersion: 2
     m_Bits: 256

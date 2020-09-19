@@ -261,7 +261,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305284222}
   m_Enabled: 1
-  m_Alpha: 0
+  m_Alpha: 1
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -71599,7 +71599,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 15
-      m_TileSpriteIndex: 17
+      m_TileSpriteIndex: 23
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -72553,7 +72553,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 13
-      m_TileSpriteIndex: 16
+      m_TileSpriteIndex: 17
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -75986,11 +75986,10 @@ Tilemap:
   - m_RefCount: 10
     m_Data: {fileID: 7158874294309322031, guid: 88deec89744dd7e478172c9d113f29a4,
       type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 4083584718629391062, guid: 88deec89744dd7e478172c9d113f29a4,
-      type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 6977463556977485108, guid: 21d42e495e8b2594da8349156dd66f74,
       type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -6708270086298583415, guid: 88deec89744dd7e478172c9d113f29a4,
@@ -76006,8 +76005,9 @@ Tilemap:
   - m_RefCount: 442
     m_Data: {fileID: 7457074360033639951, guid: 88deec89744dd7e478172c9d113f29a4,
       type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 6977463556977485108, guid: 21d42e495e8b2594da8349156dd66f74,
+      type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 4183170632131052782, guid: 88deec89744dd7e478172c9d113f29a4,
       type: 3}
@@ -76177,7 +76177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1635253570
 BoxCollider2D:
   m_ObjectHideFlags: 0

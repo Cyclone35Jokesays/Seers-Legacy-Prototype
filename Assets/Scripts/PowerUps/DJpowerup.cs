@@ -1,12 +1,13 @@
 ﻿using System;
 using UnityEngine;
+using System.Collections;
 
-public class DJpowerup : MonoBehaviour, ICollectible
+public class DJpowerup : MonoBehaviour
 {
    // public Animator anim;
-    private Vector2 loc;
 
-    public event Action<GameObject> OnCollected;
+
+
 
     private void Awake()
     {
@@ -24,7 +25,7 @@ public class DJpowerup : MonoBehaviour, ICollectible
         {
             //anim.Play("Secret Message");
             collision.gameObject.GetComponent<PlayerController>().extraJumpValue += 1;
-            OnCollected.Invoke(this.gameObject);
+           // OnCollected.Invoke(this.gameObject);
             Destroy(gameObject);
         }
     }
