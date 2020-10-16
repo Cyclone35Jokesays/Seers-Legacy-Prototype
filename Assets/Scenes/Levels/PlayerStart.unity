@@ -669,7 +669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 6, y: -6}
+  m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
 --- !u!114 &385399530
 MonoBehaviour:
@@ -692,14 +692,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: c71de009520583d47891b8ba16386143, type: 3}
-    m_FontSize: 100
+    m_Font: {fileID: 12800000, guid: 56e91f12828dfe546afc2ace333e1ab4, type: 3}
+    m_FontSize: 90
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 120
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -2102,14 +2102,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: c71de009520583d47891b8ba16386143, type: 3}
-    m_FontSize: 120
+    m_Font: {fileID: 12800000, guid: 56e91f12828dfe546afc2ace333e1ab4, type: 3}
+    m_FontSize: 90
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 120
     m_Alignment: 4
-    m_AlignByGeometry: 0
+    m_AlignByGeometry: 1
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -2771,6 +2771,10 @@ PrefabInstance:
       propertyPath: hearts.Array.data[6]
       value: 
       objectReference: {fileID: 1059940077}
+    - target: {fileID: 1377421296, guid: 13bbb1398f2d2ef4899fdad10196e97a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7438225584342273221, guid: 13bbb1398f2d2ef4899fdad10196e97a,
         type: 3}
       propertyPath: m_Name
@@ -3253,12 +3257,12 @@ PrefabInstance:
     - target: {fileID: 5906408647267676747, guid: 76e2b212c88b23e4da695d86a270d6ca,
         type: 3}
       propertyPath: ShapeModule.m_Scale.x
-      value: 32
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 5906408647267676747, guid: 76e2b212c88b23e4da695d86a270d6ca,
         type: 3}
       propertyPath: ShapeModule.m_Scale.y
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5906408647267676747, guid: 76e2b212c88b23e4da695d86a270d6ca,
         type: 3}

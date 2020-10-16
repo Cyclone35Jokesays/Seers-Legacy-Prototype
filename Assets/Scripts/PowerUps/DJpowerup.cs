@@ -6,14 +6,6 @@ public class DJpowerup : MonoBehaviour
 {
    // public Animator anim;
 
-
-
-
-    private void Awake()
-    {
-        
-    }
-
     private void Start()
     {
         //anim.GetComponent<Animator>();
