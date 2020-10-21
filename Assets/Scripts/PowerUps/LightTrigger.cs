@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class LightTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    public Animator anim;
+
     void Start()
     {
-        
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame

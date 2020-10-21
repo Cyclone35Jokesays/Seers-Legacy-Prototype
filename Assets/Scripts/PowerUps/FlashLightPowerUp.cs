@@ -9,7 +9,8 @@ public class FlashLightPowerUp : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             //anim.Play("Secret Message");
-            collision.gameObject.GetComponent<PlayerController>().extraJumpValue += 1;
+            collision.gameObject.GetComponent<LightTrigger>();
+
             // OnCollected.Invoke(this.gameObject);
             Destroy(gameObject);
         }

@@ -12,6 +12,8 @@ public class Projectile : MonoBehaviour
     public float distance;
     public int damage;
     public LayerMask whatIsSolid;
+    public GameObject barrier;
+    public GameObject tar;
 
     public Vector2 direction;
 
