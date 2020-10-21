@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class FlashLightPowerUp : MonoBehaviour
 {
@@ -8,9 +9,7 @@ public class FlashLightPowerUp : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            //anim.Play("Secret Message");
-            collision.gameObject.GetComponent<LightTrigger>();
-
+            // collision.gameObject.GetComponent<LightTrigger>().lit = isActiveAndEnabled();  
             // OnCollected.Invoke(this.gameObject);
             Destroy(gameObject);
         }

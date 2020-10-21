@@ -11,6 +11,7 @@ TagManager:
   - Obstacle
   - Blaster
   - FlyingBoss
+  - Light
   layers:
   - Default
   - TransparentFX
