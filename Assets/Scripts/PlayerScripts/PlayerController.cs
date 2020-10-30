@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem dust;   
     [SerializeField]
     private Animator anim;
-    private GameMaster gm;
+   // private GameMaster gm;
     public GameObject DJEffect;
 
     private void Awake()
@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
         extraJumps = extraJumpValue;
         rb = GetComponent<Rigidbody2D>();
         gravityStore = rb.gravityScale;
-        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+       // gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
     }
 
     private void FixedUpdate()

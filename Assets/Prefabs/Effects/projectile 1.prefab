@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6636538855783281402}
   - component: {fileID: 6269899058679820375}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Point Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 6556554007688043408}
   - component: {fileID: -6835162683236749008}
   - component: {fileID: 8513734924055192383}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: projectile 1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -121,6 +121,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

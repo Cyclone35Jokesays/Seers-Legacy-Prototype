@@ -5,7 +5,6 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class LightTrigger : MonoBehaviour
 {
-    [SerializeField]
     private Animator anim;
     private Light2D lit;
     private bool turnOnState;
@@ -25,8 +24,7 @@ public class LightTrigger : MonoBehaviour
                 turnOnState = anim.GetBool("Turn On");
                 lit.enabled = !lit.enabled;
                 anim.SetBool("Turn On", !turnOnState);
-            }
-            
+            }           
         } 
     }
 }

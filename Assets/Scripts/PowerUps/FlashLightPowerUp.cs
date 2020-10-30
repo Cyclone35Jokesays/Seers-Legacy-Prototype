@@ -5,13 +5,22 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class FlashLightPowerUp : MonoBehaviour
 {
+    LightTrigger lit;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            // collision.gameObject.GetComponent<LightTrigger>().lit = isActiveAndEnabled();  
+            SetTrue();
+           
             // OnCollected.Invoke(this.gameObject);
             Destroy(gameObject);
         }
+    }
+
+    public void SetTrue()
+    {
+       lit.gameObject.SetActive(true);
+        //  enemy.gameObject.SetActive(true);
     }
 }

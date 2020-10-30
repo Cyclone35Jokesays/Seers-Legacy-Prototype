@@ -32,7 +32,6 @@ public class Projectile : MonoBehaviour
             if (hitInfo.collider.CompareTag("Enemy"))
             {
                 hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);
-
             }
 
             if (hitInfo.collider.CompareTag("Boss"))
@@ -43,7 +42,11 @@ public class Projectile : MonoBehaviour
             if (hitInfo.collider.CompareTag("FlyingBoss"))
             {
                 hitInfo.collider.GetComponent<FlyingEnemyCount>().TakeDamage(damage);
+            }
 
+            if (hitInfo.collider.CompareTag("Target"))
+            {
+                hitInfo.collider.GetComponent<TargetBlock>().DoTask();
             }
 
             DestroyProjectile();
@@ -57,7 +60,6 @@ public class Projectile : MonoBehaviour
         Instantiate(destroyEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);
        
-        SoundManager.PlaySound("Explode");
-        
+        SoundManager.PlaySound("Explode");      
     }
 }
