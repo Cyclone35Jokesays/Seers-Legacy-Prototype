@@ -1,26 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
 
 public class FlashLightPowerUp : MonoBehaviour
 {
-    LightTrigger lit;
+    GameObject lit;
+
+    private void Start()
+    {
+       // lit = FindObjectOfType<LightTrigger>();
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            SetTrue();
-           
-            // OnCollected.Invoke(this.gameObject);
-            Destroy(gameObject);
-        }
-    }
+            lit = collision.gameObject.GetComponent<PlayerController>().LightObject;
+            lit.SetActive(true);
 
-    public void SetTrue()
-    {
-       lit.gameObject.SetActive(true);
-        //  enemy.gameObject.SetActive(true);
+            gameObject.SetActive(false);
+        }
     }
 }

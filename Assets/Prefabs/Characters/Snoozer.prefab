@@ -192,8 +192,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 7438225584342273225, guid: 13bbb1398f2d2ef4899fdad10196e97a, type: 3}
-  agroRange: 8.5
-  moveSpeed: 4.5
+  agroRange: 8.75
+  moveSpeed: 4.6
 --- !u!61 &4754561779609742812
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -235,11 +235,11 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
-  m_Material: {fileID: 0}
-  m_Interpolate: 1
+  m_GravityScale: 5
+  m_Material: {fileID: 6200000, guid: 9748497cf0e1d4a48a5b427ad3363760, type: 2}
+  m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 1
+  m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!114 &7818261791011608425
 MonoBehaviour:

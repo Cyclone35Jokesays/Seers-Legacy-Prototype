@@ -17,8 +17,8 @@ public class DJpowerup : MonoBehaviour
         {
             //anim.Play("Secret Message");
             collision.gameObject.GetComponent<PlayerController>().extraJumpValue += 1;
-           // OnCollected.Invoke(this.gameObject);
-            Destroy(gameObject);
+            // OnCollected.Invoke(this.gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

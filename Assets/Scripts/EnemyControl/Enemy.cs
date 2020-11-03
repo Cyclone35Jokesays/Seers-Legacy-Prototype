@@ -20,6 +20,7 @@ public class Enemy : MonoBehaviour
     {
         if (health <= 0)
         {
+            SoundManager.PlaySound("EnemyDeath");
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(Health, transform.position, Quaternion.identity);
             Destroy(gameObject);           

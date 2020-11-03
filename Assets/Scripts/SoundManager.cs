@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip RunningSound, JumpSound, FireSound, DeathSound, HurtSound;
+    public static AudioClip RunningSound, JumpSound, FireSound, DeathSound, HurtSound, CollectSound;
     static AudioSource audioSrc;
 
     private static SoundManager instance;
@@ -30,10 +30,10 @@ public class SoundManager : MonoBehaviour
         FireSound = Resources.Load<AudioClip>("Blaster");
         DeathSound = Resources.Load<AudioClip>("Explode");
         HurtSound = Resources.Load<AudioClip>("Getting Hurt");
+        CollectSound = Resources.Load<AudioClip>("Spawn");
 
         audioSrc = GetComponent<AudioSource>();
     }
-
 
     public static void PlaySound(string clip)
     {
@@ -53,6 +53,9 @@ public class SoundManager : MonoBehaviour
                 break;
             case "Getting Hurt":
                 audioSrc.PlayOneShot(HurtSound);
+                break;
+            case "Spawn":
+                audioSrc.PlayOneShot(CollectSound);
                 break;
         }
     }

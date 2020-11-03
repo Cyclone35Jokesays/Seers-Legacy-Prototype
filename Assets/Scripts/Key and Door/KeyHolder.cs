@@ -42,6 +42,7 @@ public class KeyHolder : MonoBehaviour
         if (key != null)
         {
             AddKey(key.GetKeyType());
+            SoundManager.PlaySound("Spawn");
             Destroy(key.gameObject);
         }
 

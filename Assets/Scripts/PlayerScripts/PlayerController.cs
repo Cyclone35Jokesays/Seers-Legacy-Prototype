@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
    // private GameMaster gm;
     public GameObject DJEffect;
+    public GameObject LightObject;
 
     private void Awake()
     {
@@ -138,7 +139,7 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("IsJumping", true);
             }
 
-            if (Input.GetKeyDown(KeyCode.W) && isGrounded)
+            if (Input.GetKeyDown(KeyCode.W) && isGrounded || Input.GetKeyDown(KeyCode.Space) && isGrounded)
             {
                 isJumping = true;
                 jumpTimeCounter = jumpTime;
@@ -146,7 +147,7 @@ public class PlayerController : MonoBehaviour
                 SoundManager.PlaySound("Jump");
             }
 
-            else if (Input.GetKeyDown(KeyCode.W) && extraJumps > 0)
+            else if (Input.GetKeyDown(KeyCode.W) && extraJumps > 0 || Input.GetKeyDown(KeyCode.Space) && extraJumps > 0)
             {
                 rb.velocity = Vector2.up * jumpForce;
                 jumpTimeCounter = jumpTime;
@@ -154,7 +155,7 @@ public class PlayerController : MonoBehaviour
                 extraJumps--;
             }
 
-            if (Input.GetKey(KeyCode.W) && isJumping)
+            if (Input.GetKey(KeyCode.W) && isJumping || Input.GetKey(KeyCode.Space) && isJumping)
             {
                 if (jumpTimeCounter > 0)
                 {
@@ -167,7 +168,7 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyUp(KeyCode.W))
+            if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.Space))
             {
                 isJumping = false;
             }
@@ -190,7 +191,7 @@ public class PlayerController : MonoBehaviour
                 rb.gravityScale = 0f;
                 rb.velocity = Vector2.zero;
 
-                if (Input.GetKeyDown(KeyCode.W))
+                if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
                 {
                     wallJumpCounter = wallJumpTime;
 
@@ -199,6 +200,7 @@ public class PlayerController : MonoBehaviour
                     isGrabbing = false;
                 }
             }
+
             else
             {
                 rb.gravityScale = gravityStore;

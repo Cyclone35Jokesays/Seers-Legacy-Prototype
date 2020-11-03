@@ -2443,8 +2443,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -138, y: -138}
-  m_SizeDelta: {x: 240, y: 240}
+  m_AnchoredPosition: {x: -130, y: -130}
+  m_SizeDelta: {x: 235, y: 235}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &31713854
 MonoBehaviour:
@@ -2459,14 +2459,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.64705884}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.7058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ae02183cc9a0fbb45802a1e2448e543c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bbc76e7270ad6cc47b18cb9ade641172, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -54359,7 +54359,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 42
-      m_TileSpriteIndex: 42
+      m_TileSpriteIndex: 43
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -58715,7 +58715,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 8
-      m_TileSpriteIndex: 8
+      m_TileSpriteIndex: 42
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -101976,9 +101976,8 @@ Tilemap:
   - m_RefCount: 3
     m_Data: {fileID: -5665889735847176292, guid: 5b91c3f35c2716c4f9499cd831df0736,
       type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 2284413661362311607, guid: 5b91c3f35c2716c4f9499cd831df0736,
-      type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -7947875886983241115, guid: 5b91c3f35c2716c4f9499cd831df0736,
       type: 3}
@@ -102077,10 +102076,11 @@ Tilemap:
     m_Data: {fileID: 7108238209999571957, guid: 5b91c3f35c2716c4f9499cd831df0736,
       type: 3}
   - m_RefCount: 1
+    m_Data: {fileID: 2284413661362311607, guid: 5b91c3f35c2716c4f9499cd831df0736,
+      type: 3}
+  - m_RefCount: 1
     m_Data: {fileID: -2193911678544826354, guid: 5b91c3f35c2716c4f9499cd831df0736,
       type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: -6869139575339289751, guid: 5b91c3f35c2716c4f9499cd831df0736,
       type: 3}
