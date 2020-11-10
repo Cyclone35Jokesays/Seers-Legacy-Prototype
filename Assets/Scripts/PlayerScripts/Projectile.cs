@@ -12,8 +12,6 @@ public class Projectile : MonoBehaviour
     public float distance;
     public int damage;
     public LayerMask whatIsSolid;
-    public GameObject barrier;
-    public GameObject tar;
 
     public Vector2 direction;
 
@@ -32,21 +30,19 @@ public class Projectile : MonoBehaviour
             if (hitInfo.collider.CompareTag("Enemy"))
             {
                 hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);
+                SoundManager.PlaySound("Explode");
             }
 
             if (hitInfo.collider.CompareTag("Boss"))
             {
                 hitInfo.collider.GetComponent<BossEnemy>().TakeDamage(damage);
+                SoundManager.PlaySound("Explode");
             }
 
             if (hitInfo.collider.CompareTag("FlyingBoss"))
             {
                 hitInfo.collider.GetComponent<FlyingEnemyCount>().TakeDamage(damage);
-            }
-
-            if (hitInfo.collider.CompareTag("Target"))
-            {
-                hitInfo.collider.GetComponent<TargetBlock>().DoTask();
+                SoundManager.PlaySound("Explode");
             }
 
             DestroyProjectile();
@@ -58,8 +54,6 @@ public class Projectile : MonoBehaviour
     void DestroyProjectile()
     {
         Instantiate(destroyEffect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
-       
-        SoundManager.PlaySound("Explode");      
+        Destroy(gameObject);      
     }
 }

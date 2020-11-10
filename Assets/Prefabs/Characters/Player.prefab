@@ -5113,7 +5113,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 2.3
+  m_PointLightOuterRadius: 2.2
   m_PointLightDistance: 3
   m_PointLightQuality: 0
   m_ShapeLightParametricSides: 5
@@ -5198,7 +5198,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 2b335573df80049ccb85e3ce21e9706e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.7713361, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5253,10 +5253,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.861
-  m_Color: {r: 0.8814129, g: 0.9254902, b: 0.372549, a: 1}
-  m_Intensity: 2.5
-  m_LightVolumeOpacity: 0.25
+  m_FalloffIntensity: 0.934
+  m_Color: {r: 0.14887854, g: 0.64066213, b: 0.9622642, a: 1}
+  m_Intensity: 2.6
+  m_LightVolumeOpacity: 0.256
   m_ApplyToSortingLayers: 00000000111b8119
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
@@ -5267,7 +5267,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0.1
-  m_PointLightOuterRadius: 1
+  m_PointLightOuterRadius: 1.12
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -5663,7 +5663,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: e7bc1a619076947c3b3bb3d4a577127e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.9393878, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

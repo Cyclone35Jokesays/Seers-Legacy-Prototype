@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+//using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem dust;   
     [SerializeField]
     private Animator anim;
-   // private GameMaster gm;
+    // private GameMaster gm;
     public GameObject DJEffect;
     public GameObject LightObject;
 

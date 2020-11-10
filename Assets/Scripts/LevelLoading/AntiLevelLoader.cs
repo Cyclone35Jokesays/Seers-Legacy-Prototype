@@ -8,7 +8,7 @@ public class AntiLevelLoader : MonoBehaviour
 {
     [SerializeField] private int LevelIndex = 0;
     public Animator transition;
-    private float transitionTime = 0.2f;
+    private float transitionTime = 0.3f;
 
     [Serializable]
     public class LevelPowerupData
