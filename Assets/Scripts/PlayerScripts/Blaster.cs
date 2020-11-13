@@ -13,6 +13,7 @@ public class Blaster : MonoBehaviour
     public bool trip = false;
 
     private float timeBtwShots;
+    [SerializeField]
     public float startTimeBtwShots;
 
     private void Update()

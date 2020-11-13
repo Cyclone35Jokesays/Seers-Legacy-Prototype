@@ -265,7 +265,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 305284222}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -66334,7 +66334,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block: {fileID: 1635253569}
-  enemy: {fileID: 1228518014228565644}
 --- !u!61 &935462596
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -66369,7 +66368,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 935462594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 286.3, y: -7.39, z: -11.1813345}
+  m_LocalPosition: {x: 286.3, y: -8.389999, z: -11.1813345}
   m_LocalScale: {x: 20.92, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -76665,9 +76664,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f878b6f313115a04aadfa502f8576e6d, type: 3}
---- !u!1 &1228518014228565644 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1228518013869060205, guid: f878b6f313115a04aadfa502f8576e6d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1228518014228565643}
-  m_PrefabAsset: {fileID: 0}

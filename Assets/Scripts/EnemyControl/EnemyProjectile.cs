@@ -12,14 +12,16 @@ public class EnemyProjectile : MonoBehaviour
     private Transform player;
     private Vector2 target;
 
-    void Start()
+    public Vector2 direction;
+
+    private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameManager.Instance.player.transform;
         target = new Vector2(player.position.x, player.position.y);
         Invoke("DestroyProjectile", lifeTime);
     }
 
-    void Update()
+    private void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
@@ -27,23 +29,25 @@ public class EnemyProjectile : MonoBehaviour
         {
             DestroyProjectile();
         }
+
+        transform.Translate(direction * speed * Time.deltaTime);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
-            other.GetComponent<Health>().takeDamage();
+            collision.GetComponent<Health>().takeDamage();
             DestroyProjectile();
         }
 
-        else if (other.CompareTag("Ground"))
+        else if (collision.CompareTag("Ground"))
         {
             DestroyProjectile();
         }
     }
 
-    void DestroyProjectile()
+    private void DestroyProjectile()
     {
         Destroy(gameObject);
     }

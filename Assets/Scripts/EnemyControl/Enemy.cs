@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
             SoundManager.PlaySound("EnemyDeath");
             Instantiate(deathEffect, transform.position, Quaternion.identity);
             Instantiate(Health, transform.position, Quaternion.identity);
-            Destroy(gameObject);           
+            Destroy(gameObject);
         }
     }
 

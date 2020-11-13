@@ -270,6 +270,7 @@ MonoBehaviour:
   startTimeBtwShots: 3
   projectile: {fileID: 8686834216095720108, guid: 07cf5aba6b00c744c96369e310499bd2,
     type: 3}
+  agroRange: 13
 --- !u!70 &2125935473258672593
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

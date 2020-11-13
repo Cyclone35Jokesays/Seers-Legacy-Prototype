@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class SeekerEnemy : MonoBehaviour
 {
+    [SerializeField]
     public float speed;
+    [SerializeField]
     public float stoppingDistance;
+    [SerializeField]
     public float retreatDistance;
     private Transform player;
 
     private float timeBtwShots;
+    [SerializeField]
     public float startTimeBtwShots;
 
+    [SerializeField]
     public GameObject projectile;
+
+    [SerializeField]
+    public float agroRange;
 
     private void Start()
     {
@@ -22,6 +30,21 @@ public class SeekerEnemy : MonoBehaviour
 
 
     private void Update()
+    {
+        float distToPlayer = Vector2.Distance(transform.position, player.position);
+        if (distToPlayer < agroRange)
+        {   
+            ChasePlayer();
+        }
+
+        else if(distToPlayer != agroRange)
+        {    
+            StopChasingPlayer();
+            speed = 3f;
+        }
+    }
+
+    public void ChasePlayer()
     {
         if (Vector2.Distance(transform.position, player.position) > stoppingDistance)
         {
@@ -48,5 +71,10 @@ public class SeekerEnemy : MonoBehaviour
         {
             timeBtwShots -= Time.deltaTime;
         }
+    }
+
+    public void StopChasingPlayer()
+    {
+        speed = 0f;
     }
 }

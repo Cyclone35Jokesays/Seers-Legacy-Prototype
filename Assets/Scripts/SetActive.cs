@@ -5,13 +5,14 @@ using UnityEngine;
 public class SetActive : MonoBehaviour
 {
     public GameObject block;
-   // public GameObject enemy;
+    public GameObject block2;
+    public GameObject Boss;
 
-  
     public void SettingTrue()
     {
         block.gameObject.SetActive(true);
-      //  enemy.gameObject.SetActive(true);
+        block2.gameObject.SetActive(true);
+        Boss.gameObject.SetActive(true);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -19,7 +20,7 @@ public class SetActive : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             SettingTrue();
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }      
     }
 }

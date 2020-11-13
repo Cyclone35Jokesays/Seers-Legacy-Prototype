@@ -4901,9 +4901,9 @@ MonoBehaviour:
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 59
-  m_PointLightOuterAngle: 132
+  m_PointLightOuterAngle: 135
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 14
+  m_PointLightOuterRadius: 17
   m_PointLightDistance: 3
   m_PointLightQuality: 0
   m_ShapeLightParametricSides: 5
@@ -5053,7 +5053,7 @@ MonoBehaviour:
     type: 3}
   shotPoint: {fileID: 3489697368205229118}
   trip: 0
-  startTimeBtwShots: 0.3
+  startTimeBtwShots: 0.25
 --- !u!1 &2002897087381540688
 GameObject:
   m_ObjectHideFlags: 0
