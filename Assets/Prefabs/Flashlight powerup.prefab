@@ -12,13 +12,14 @@ GameObject:
   - component: {fileID: 567603343448308053}
   - component: {fileID: 567603343448308074}
   - component: {fileID: 6002047952043993762}
+  - component: {fileID: 1558609885}
   m_Layer: 0
   m_Name: Flashlight powerup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &567603343448308052
 Transform:
   m_ObjectHideFlags: 0
@@ -111,6 +112,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 144654ba5f7b38547a03bb2e774f75f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1558609885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567603343448308075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b666b7f2e6a36a047998aaa979f70633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &567603344294477391

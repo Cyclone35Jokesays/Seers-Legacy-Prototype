@@ -12,6 +12,7 @@ TagManager:
   - Blaster
   - FlyingBoss
   - Light
+  - Barrier
   layers:
   - Default
   - TransparentFX

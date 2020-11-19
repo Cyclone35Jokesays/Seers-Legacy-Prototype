@@ -13,12 +13,13 @@ GameObject:
   - component: {fileID: 4560543784820639757}
   - component: {fileID: 4560543784820639745}
   - component: {fileID: 4560543784820639744}
+  - component: {fileID: 1525006095}
   m_Layer: 0
   m_Name: DJ power up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4560543784820639759
 Transform:
@@ -133,6 +134,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fce71c72290242c428e9d10f30acc502, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1525006095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4560543784820639756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b666b7f2e6a36a047998aaa979f70633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4560543785426011832
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +161,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4560543785426011833
 Transform:

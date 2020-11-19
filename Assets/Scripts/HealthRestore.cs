@@ -12,4 +12,15 @@ public class HealthRestore : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void Start()
+    {
+        StartCoroutine(removeObject());
+    }
+
+    public IEnumerator removeObject()
+    {
+        yield return new WaitForSeconds(10f);
+        Destroy(gameObject);
+    }
 }

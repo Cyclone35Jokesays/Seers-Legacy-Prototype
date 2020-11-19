@@ -45,13 +45,19 @@ public class Projectile : MonoBehaviour
                 SoundManager.PlaySound("Explode");
             }
 
+            if (hitInfo.collider.CompareTag("Barrier"))
+            {
+                hitInfo.collider.GetComponent<HollowAndSolid>().Toggle();
+                SoundManager.PlaySound("Explode");
+            }
+
             DestroyProjectile();
         }
 
         transform.Translate(direction * speed * Time.deltaTime);
     }
 
-    void DestroyProjectile()
+    public void DestroyProjectile()
     {
         Instantiate(destroyEffect, transform.position, Quaternion.identity);
         Destroy(gameObject);      

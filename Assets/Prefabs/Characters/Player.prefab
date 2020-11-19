@@ -5256,7 +5256,7 @@ MonoBehaviour:
   m_FalloffIntensity: 0.934
   m_Color: {r: 0.14887854, g: 0.64066213, b: 0.9622642, a: 1}
   m_Intensity: 2.6
-  m_LightVolumeOpacity: 0.256
+  m_LightVolumeOpacity: 0.24
   m_ApplyToSortingLayers: 00000000111b8119
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
@@ -5368,7 +5368,7 @@ Rigidbody2D:
   m_Mass: 0.8
   m_LinearDrag: 0.2
   m_AngularDrag: 0
-  m_GravityScale: 2.1
+  m_GravityScale: 2.6
   m_Material: {fileID: 6200000, guid: 13e64210dff6b744f9e0551f9276d4e8, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 1
@@ -5387,8 +5387,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blaster: {fileID: 1428738784}
-  speed: 6.3
-  jumpForce: 9.5
+  speed: 6.45
+  jumpForce: 10.1
   playerState: 0
   groundCheck: {fileID: 7438225583457520372}
   checkRadius: 0.1
@@ -5396,7 +5396,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   wallGrabPoint: {fileID: 1359410243}
-  wallJumpTime: 0.5
+  wallJumpTime: 0.4
+  wallJumpCounter: 0
   extraJumpValue: 0
   jumpTime: 0.35
   dust: {fileID: 933902943}
@@ -5470,7 +5471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   applyKnockback: 0
   knockbackSpeedX: 50
-  knockbackSpeedY: 11
+  knockbackSpeedY: 11.5
   knockbackDuration: 2.5
 --- !u!114 &419214975130545582
 MonoBehaviour:
@@ -5555,9 +5556,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 427891473
-  m_SortingLayer: 1
-  m_SortingOrder: 10
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 9
   m_Sprite: {fileID: -3316437661583186769, guid: b08c187523a5a8346abd32e803c1534f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

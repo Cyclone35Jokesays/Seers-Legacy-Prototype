@@ -36,7 +36,9 @@ public class PlayerController : MonoBehaviour
     public Transform wallGrabPoint;
     private bool canGrab, isGrabbing;
     private float gravityStore;
-    [SerializeField] float wallJumpTime = .2f;
+    [SerializeField]
+    public float wallJumpTime;
+    [SerializeField]
     private float wallJumpCounter;
 
     [Header("DoubleJump")]
@@ -53,6 +55,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Animator anim;
     // private GameMaster gm;
+    [SerializeField]
     public GameObject DJEffect;
     public GameObject LightObject;
 
@@ -90,12 +93,12 @@ public class PlayerController : MonoBehaviour
 
         if (moveInput > 0)
         {
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            transform.eulerAngles = new Vector2(0, 0);
 
         }
         else if (moveInput < 0)
         {
-            transform.eulerAngles = new Vector3(0, 180, 0);
+            transform.eulerAngles = new Vector2(0, 180);
         }
     }
 
@@ -112,14 +115,11 @@ public class PlayerController : MonoBehaviour
                     dust.Play();
                 }
 
-                if (Input.GetKey(KeyCode.A))
+                if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
                 {
                     CreateDust();
                 }
-                if (Input.GetKey(KeyCode.D))
-                {
-                    CreateDust();
-                }
+
                 break;
             case PlayerState.JumpState:
                 break;
@@ -215,14 +215,3 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("IsGrabbing", isGrabbing);
     }   
 }
-/*public IEnumerator Knockback(float knockDuration, float knockPower, Vector2 knockbackDirection)
-    {
-        float timer = 0;
-        rb.velocity = new Vector2(rb.velocity.x, 0);
-        while( knockDuration > timer)
-        {
-            timer += Time.deltaTime;
-            rb.AddForce(new Vector2(knockbackDirection.x * -100, knockbackDirection.y + knockPower));
-        }
-        yield return 0;
-    }   */

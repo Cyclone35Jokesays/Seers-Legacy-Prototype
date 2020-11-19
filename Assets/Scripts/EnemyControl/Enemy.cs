@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public int health;
     [SerializeField]
     public GameObject deathEffect;
+    [SerializeField]
     public GameObject Health;
     private PlayerController pc;
 
