@@ -4906,9 +4906,10 @@ GameObject:
   - component: {fileID: 7711929719239965311}
   - component: {fileID: 7711929719239965296}
   - component: {fileID: 743092825936594439}
+  - component: {fileID: 4787312322119036722}
   m_Layer: 9
   m_Name: Ghost Boss
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4968,7 +4969,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 11
   m_Sprite: {fileID: 21300000, guid: 12969f4ab11dc70429f112db28d08b71, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.73333335}
   m_FlipX: 0
@@ -5033,3 +5034,24 @@ MonoBehaviour:
   Health: {fileID: 8861429808185266569, guid: 6724ba0a46cc4954e8e7625ff78f6b30, type: 3}
   block1: {fileID: 0}
   block2: {fileID: 0}
+--- !u!50 &4787312322119036722
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7711929719239965297}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4

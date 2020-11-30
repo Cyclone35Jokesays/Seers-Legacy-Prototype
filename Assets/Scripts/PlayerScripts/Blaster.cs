@@ -12,6 +12,9 @@ public class Blaster : MonoBehaviour
     public Transform shotPoint;
     public bool trip = false;
 
+    public GameObject turnSolidProjectile;
+    public bool turnSolid = false;
+
     private float timeBtwShots;
     [SerializeField]
     public float startTimeBtwShots;
@@ -30,6 +33,16 @@ public class Blaster : MonoBehaviour
                 triple();
                 timeBtwShots = startTimeBtwShots;
                 SoundManager.PlaySound("Blaster");
+            }
+
+            if (turnSolid == true)
+            {
+                if (Input.GetMouseButtonDown(1))
+                {
+                    Instantiate(turnSolidProjectile, shotPoint.position, transform.rotation);
+                    timeBtwShots = startTimeBtwShots;
+                    SoundManager.PlaySound("Blaster");
+                }
             }
         }
         else

@@ -17,8 +17,6 @@ public class Health : MonoBehaviour
     private PlayerController player;
     private Knockback KB;
     private Invincible IN;
-   // public GameObject Hurt;
-
 
     private void Start()
     {
@@ -110,7 +108,7 @@ public class Health : MonoBehaviour
             }
             KB.KnockBack();
 
-            if (health <= 0)
+            if (health <= 0 || health <= -1)
             {
                 restartHP();
                 transform.position = GameManager.Instance.lastCheckPointPos;
@@ -136,7 +134,7 @@ public class Health : MonoBehaviour
             }
             KB.KnockBack();
 
-            if (health <= 0)
+            if (health <= 0 || health <= -1)
             {
                 restartHP();
                 transform.position = GameManager.Instance.lastCheckPointPos;

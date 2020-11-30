@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TargetProjectile : MonoBehaviour
 {
+    [SerializeField]
     public float speed;
 
     private Transform obj;

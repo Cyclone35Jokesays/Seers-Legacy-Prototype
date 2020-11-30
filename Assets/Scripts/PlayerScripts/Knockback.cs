@@ -7,7 +7,6 @@ public class Knockback : MonoBehaviour
     [Header("KnockBack")]
     [SerializeField]
     private bool applyKnockback;
-    [SerializeField]
     private float knockbackSpeedX, knockbackSpeedY, knockbackDuration;
     private bool knockback;
     private float knockbackStart;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FlyingEnemyCount : MonoBehaviour
 {
+    [SerializeField]
     public int health;
     public GameObject deathEffect;
     public GameObject powerUp;

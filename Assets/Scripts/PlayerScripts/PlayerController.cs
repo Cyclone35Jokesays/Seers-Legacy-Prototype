@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -26,6 +25,7 @@ public class PlayerController : MonoBehaviour
     
     [Header("Ground Touching")]
     private bool isGrounded;
+    [SerializeField]
     public Transform groundCheck;
     [SerializeField]
     public float checkRadius;
@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsGround;
 
     [Header("WallJumping")]
+    [SerializeField]
     public Transform wallGrabPoint;
     private bool canGrab, isGrabbing;
     private float gravityStore;
@@ -58,6 +59,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     public GameObject DJEffect;
     public GameObject LightObject;
+    public Blaster solidHollowObject;
 
     private void Awake()
     {

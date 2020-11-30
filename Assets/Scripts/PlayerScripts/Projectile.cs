@@ -13,8 +13,10 @@ public class Projectile : MonoBehaviour
     public int damage;
     public LayerMask whatIsSolid;
 
+    [SerializeField]
     public Vector2 direction;
 
+    [SerializeField]
     public GameObject destroyEffect;
 
     private void Start()
@@ -33,21 +35,16 @@ public class Projectile : MonoBehaviour
                 SoundManager.PlaySound("Explode");
             }
 
-            if (hitInfo.collider.CompareTag("Boss"))
+            else if (hitInfo.collider.CompareTag("Boss"))
             {
-                hitInfo.collider.GetComponent<BossEnemy>().TakeDamage(damage);
+                hitInfo.collider.GetComponent<ghostBossBehaviour>().TakeDamage(damage);
+                //hitInfo.collider.GetComponent<BossEnemy>().TakeDamage(damage);
                 SoundManager.PlaySound("Explode");
             }
 
-            if (hitInfo.collider.CompareTag("FlyingBoss"))
+            else if (hitInfo.collider.CompareTag("FlyingBoss"))
             {
                 hitInfo.collider.GetComponent<FlyingEnemyCount>().TakeDamage(damage);
-                SoundManager.PlaySound("Explode");
-            }
-
-            if (hitInfo.collider.CompareTag("Barrier"))
-            {
-                hitInfo.collider.GetComponent<HollowAndSolid>().Toggle();
                 SoundManager.PlaySound("Explode");
             }
 

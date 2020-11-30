@@ -4903,7 +4903,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 59
   m_PointLightOuterAngle: 135
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 17
+  m_PointLightOuterRadius: 19
   m_PointLightDistance: 3
   m_PointLightQuality: 0
   m_ShapeLightParametricSides: 5
@@ -5047,12 +5047,15 @@ MonoBehaviour:
   offSet: 0
   projectile1: {fileID: 8686834216095720108, guid: 92f0c809259c66043a4a90733b283b9c,
     type: 3}
-  projectile2: {fileID: 8686834216095720108, guid: 1d345e4ad2737c9489991942d470b8a1,
+  projectile2: {fileID: 8686834216095720108, guid: 3be84f06000027848b78f49b6569195b,
     type: 3}
-  projectile3: {fileID: 8686834216095720108, guid: f36c5640cc7f5c248b18209be7f30909,
+  projectile3: {fileID: 8686834216095720108, guid: 7181e3ead0909e945b24b933e69457bc,
     type: 3}
   shotPoint: {fileID: 3489697368205229118}
   trip: 0
+  turnSolidProjectile: {fileID: 8686834216095720108, guid: 8579a13f52372eb40beea8578223126f,
+    type: 3}
+  turnSolid: 0
   startTimeBtwShots: 0.25
 --- !u!1 &2002897087381540688
 GameObject:
@@ -5079,8 +5082,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2002897087381540688}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.06, y: 0, z: 0}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_Children: []
   m_Father: {fileID: 7438225584342273225}
   m_RootOrder: 3
@@ -5101,31 +5104,35 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
   m_Color: {r: 0.93333334, g: 0.88268286, b: 0.76862746, a: 1}
-  m_Intensity: 1.15
-  m_LightVolumeOpacity: 0.02
-  m_ApplyToSortingLayers: 111b8119
+  m_Intensity: 1
+  m_LightVolumeOpacity: 0.01
+  m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
-  m_LightOrder: -1
+  m_LightOrder: 1
   m_AlphaBlendOnOverlap: 1
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 2.2
+  m_PointLightInnerRadius: 0.33
+  m_PointLightOuterRadius: 2.5
   m_PointLightDistance: 3
   m_PointLightQuality: 0
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffSize: 3
   m_ShapeLightFalloffOffset: {x: 0, y: 0}
   m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
+  - {x: -0.6, y: -0.5, z: 0}
+  - {x: -0.3, y: -0.9, z: 0}
+  - {x: 0.35, y: -0.9, z: 0}
+  - {x: 0.65, y: -0.5, z: 0}
+  - {x: 0.65, y: 0.5, z: 0}
+  - {x: 0.35, y: 0.9, z: 0}
+  - {x: -0.35, y: 0.9, z: 0}
+  - {x: -0.6, y: 0.5, z: 0}
 --- !u!1 &5408791010418911648
 GameObject:
   m_ObjectHideFlags: 0
@@ -5368,7 +5375,7 @@ Rigidbody2D:
   m_Mass: 0.8
   m_LinearDrag: 0.2
   m_AngularDrag: 0
-  m_GravityScale: 2.6
+  m_GravityScale: 2.35
   m_Material: {fileID: 6200000, guid: 13e64210dff6b744f9e0551f9276d4e8, type: 2}
   m_Interpolate: 1
   m_SleepingMode: 1
@@ -5388,7 +5395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blaster: {fileID: 1428738784}
   speed: 6.45
-  jumpForce: 10.1
+  jumpForce: 10.2
   playerState: 0
   groundCheck: {fileID: 7438225583457520372}
   checkRadius: 0.1
@@ -5405,6 +5412,7 @@ MonoBehaviour:
   DJEffect: {fileID: 4163995464382387932, guid: 7ac91657b2bd7e34880399b1628ecae8,
     type: 3}
   LightObject: {fileID: 1377421296}
+  solidHollowObject: {fileID: 1428738784}
 --- !u!70 &4257768094960760004
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5470,9 +5478,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   applyKnockback: 0
-  knockbackSpeedX: 50
-  knockbackSpeedY: 11.5
-  knockbackDuration: 2.5
 --- !u!114 &419214975130545582
 MonoBehaviour:
   m_ObjectHideFlags: 0

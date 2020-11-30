@@ -11,7 +11,7 @@ public class EnemyProjectile : MonoBehaviour
 
     private Transform player;
     private Vector2 target;
-
+    public LayerMask hitting;
     public Vector2 direction;
 
     private void Start()

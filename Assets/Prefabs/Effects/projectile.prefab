@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467250322953522588}
   m_LocalRotation: {x: -0.50000024, y: -0.4999998, z: 0.49999985, w: 0.50000024}
-  m_LocalPosition: {x: 2.8, y: -0.03, z: -6.7680407}
+  m_LocalPosition: {x: 2.8, y: -0.03, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 8337725510839434052}
@@ -115,7 +115,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.8
+      scalar: 0.75
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4847,8 +4847,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7326198850334372167}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00999999, y: -0.017, z: 0}
-  m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8337725510839434052}
   m_RootOrder: 0
@@ -4869,8 +4869,8 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
   m_Color: {r: 0, g: 0.3327437, b: 0.47058824, a: 1}
-  m_Intensity: 3.17
-  m_LightVolumeOpacity: 0.067
+  m_Intensity: 3.2
+  m_LightVolumeOpacity: 0.07
   m_ApplyToSortingLayers: 00000000111b8119
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
@@ -4888,36 +4888,36 @@ MonoBehaviour:
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
   m_ShapeLightFalloffSize: 6
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapeLightFalloffOffset: {x: -9.1, y: 0}
   m_ShapePath:
-  - {x: -2.3507128, y: -1.369056, z: 0}
-  - {x: -2.3553314, y: -2.3315792, z: 0}
-  - {x: -0.4707648, y: -2.3315792, z: 0}
-  - {x: -0.47076523, y: -3.2570677, z: 0}
-  - {x: 4.2011547, y: -3.2683542, z: 0}
-  - {x: 4.212444, y: -2.320295, z: 0}
-  - {x: 5.1829386, y: -2.3315818, z: 0}
-  - {x: 5.182938, y: -1.3948069, z: 0}
-  - {x: 6.130873, y: -1.4060953, z: 0}
-  - {x: 6.119589, y: -0.44674763, z: 0}
-  - {x: 7.0787992, y: -0.45803413, z: 0}
-  - {x: 7.0903416, y: 0.5270662, z: 0}
-  - {x: 6.097019, y: 0.51259977, z: 0}
-  - {x: 6.1421585, y: 1.4606614, z: 0}
-  - {x: 5.1985254, y: 1.4444827, z: 0}
-  - {x: 5.1938553, y: 2.3929691, z: 0}
-  - {x: 4.25, y: 2.4, z: 0}
-  - {x: 4.25, y: 3.3, z: 0}
-  - {x: -0.44819903, y: 3.3003623, z: 0}
-  - {x: -0.44819903, y: 2.3861606, z: 0}
-  - {x: -2.321487, y: 2.3748708, z: 0}
-  - {x: -2.328143, y: 1.4254885, z: 0}
-  - {x: -4.2060556, y: 1.4268094, z: 0}
-  - {x: -4.2173395, y: 0.546467, z: 0}
-  - {x: -7.0385494, y: 0.5126081, z: 0}
-  - {x: -7.0385494, y: -0.44673935, z: 0}
-  - {x: -4.206048, y: -0.43545464, z: 0}
-  - {x: -4.2173324, y: -1.3835155, z: 0}
+  - {x: -1.5649711, y: -0.9339465, z: 0}
+  - {x: -1.5629308, y: -1.563478, z: 0}
+  - {x: -0.31225288, y: -1.5627652, z: 0}
+  - {x: -0.31581616, y: -2.1911707, z: 0}
+  - {x: 2.8148224, y: -2.187758, z: 0}
+  - {x: 2.8130698, y: -1.5633919, z: 0}
+  - {x: 3.4399128, y: -1.5569165, z: 0}
+  - {x: 3.439573, y: -0.93926424, z: 0}
+  - {x: 4.0654283, y: -0.93269217, z: 0}
+  - {x: 4.060957, y: -0.3139877, z: 0}
+  - {x: 4.691811, y: -0.31129938, z: 0}
+  - {x: 4.688271, y: 0.31441605, z: 0}
+  - {x: 4.066017, y: 0.31176403, z: 0}
+  - {x: 4.0709953, y: 0.9413576, z: 0}
+  - {x: 3.4400454, y: 0.93091697, z: 0}
+  - {x: 3.4439807, y: 1.5695428, z: 0}
+  - {x: 2.8156767, y: 1.5679665, z: 0}
+  - {x: 2.8222113, y: 2.1927788, z: 0}
+  - {x: -0.3145735, y: 2.194444, z: 0}
+  - {x: -0.31021926, y: 1.5680135, z: 0}
+  - {x: -1.5670656, y: 1.5715379, z: 0}
+  - {x: -1.5649843, y: 0.94082916, z: 0}
+  - {x: -2.8116531, y: 0.9383578, z: 0}
+  - {x: -2.8128324, y: 0.31739998, z: 0}
+  - {x: -4.690298, y: 0.32245088, z: 0}
+  - {x: -4.690298, y: -0.3132957, z: 0}
+  - {x: -2.8129673, y: -0.31568742, z: 0}
+  - {x: -2.815782, y: -0.9454647, z: 0}
 --- !u!1 &8686834216095720108
 GameObject:
   m_ObjectHideFlags: 0
@@ -4995,7 +4995,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 11
   m_Sprite: {fileID: 21300000, guid: 2230f5aea63a3b94080763f22686aaa1, type: 3}
-  m_Color: {r: 0, g: 0.74239993, b: 1, a: 1}
+  m_Color: {r: 0.3622641, g: 0.834939, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
