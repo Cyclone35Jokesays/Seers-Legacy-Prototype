@@ -5456,6 +5456,7 @@ MonoBehaviour:
   - {fileID: 0}
   fullHeart: {fileID: 21300000, guid: 88eff5c3eaf08134ebccfb96af649ea9, type: 3}
   EmptyHeart: {fileID: 21300000, guid: 2739b12286680504487fda59ab117936, type: 3}
+  spriteDmg: {fileID: 3233231776151136152}
 --- !u!114 &3613169777030123469
 MonoBehaviour:
   m_ObjectHideFlags: 0

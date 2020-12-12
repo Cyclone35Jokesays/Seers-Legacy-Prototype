@@ -19,6 +19,7 @@ public class HollowAndSolid : MonoBehaviour
     {
         GetComponent<BoxCollider2D>().isTrigger = true;
         thisLight.color = blue;
+        gameObject.layer = 0;
         StopAllCoroutines();
     }
 
@@ -30,6 +31,7 @@ public class HollowAndSolid : MonoBehaviour
             StartCoroutine(SolidCoroutine());
             collision.gameObject.SetActive(false);
             collision.GetComponent<OtherProjectile>().DestroyProjectile();
+            gameObject.layer = 8;
             thisLight.color = orange;
         }
 

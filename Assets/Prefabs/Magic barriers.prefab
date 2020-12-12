@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4326352481280423148}
   - component: {fileID: 4326352481280423147}
   - component: {fileID: 4326352481280423144}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Magic barriers
   m_TagString: Barrier
   m_Icon: {fileID: 0}

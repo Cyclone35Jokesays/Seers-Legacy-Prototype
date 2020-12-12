@@ -4,20 +4,36 @@ using UnityEngine;
 
 public class ghostBossBehaviour : MonoBehaviour
 {
+    [Header("Normal")]
     [SerializeField]
     public int health;
     [SerializeField]
     public GameObject deathEffect;
+    [SerializeField]
     public GameObject Health;
     private PlayerController pc;
     public GameObject block1;
     public GameObject block2;
     public GameObject CamSwitch;
 
+    [Header("Shooting")]
+    private float timeBtwShots;
+    [SerializeField]
+    public float startTimeBtwShots;
+    [SerializeField]
+    public GameObject Shot1;
+    [SerializeField]
+    public GameObject Shot2;
+    [SerializeField]
+    public GameObject Shot3;
+    [SerializeField]
+    public GameObject Shot4;
+
     private void Start()
     {
         pc = GameManager.Instance.GetComponent<PlayerController>();
         StartCoroutine(makeSound());
+        timeBtwShots = startTimeBtwShots;
     }
 
     private void Update()
@@ -31,6 +47,21 @@ public class ghostBossBehaviour : MonoBehaviour
             block1.gameObject.SetActive(false);
             block2.gameObject.SetActive(false);
             CamSwitch.gameObject.SetActive(false);
+        }
+
+        if (timeBtwShots <= 0)
+        {
+            SoundManager.PlaySound("EnemyShot");
+            Instantiate(Shot1, transform.position, Quaternion.identity);
+            Instantiate(Shot2, transform.position, Quaternion.identity);
+            Instantiate(Shot3, transform.position, Quaternion.identity);
+            Instantiate(Shot4, transform.position, Quaternion.identity);
+            timeBtwShots = startTimeBtwShots;
+        }
+
+        else
+        {
+            timeBtwShots -= Time.deltaTime;
         }
     }
 

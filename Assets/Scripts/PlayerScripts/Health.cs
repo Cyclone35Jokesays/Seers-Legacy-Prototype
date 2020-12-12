@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
+    [Header("Values")]
     public int health;
     public int numOfHearts;
 
+    [Header("General")]
     private GameMaster gm;
 
     public Image[] hearts;
@@ -17,12 +19,21 @@ public class Health : MonoBehaviour
     private PlayerController player;
     private Knockback KB;
     private Invincible IN;
+    [SerializeField]
+    public SpriteRenderer spriteDmg;
+
+    [Header("Colors")]
+    private Color normal = new Color(255, 255, 255);
+    private Color RedHurt = new Color(255, 145, 145);
+    private Color GreenHeal = new Color(129, 255, 114);
+
 
     private void Start()
     {
         player = GameManager.Instance.player.GetComponent<PlayerController>();
         KB = GetComponent<Knockback>();
         IN = GetComponent<Invincible>();
+        spriteDmg.GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -55,11 +66,17 @@ public class Health : MonoBehaviour
     public void takeDamage()
     {
         health -= 1;
+        spriteDmg.color = RedHurt;
+        StartCoroutine(colorSwap());
+        spriteDmg.color = normal;
     }
 
     public void restoreHealth()
     {
         health += 1;
+        spriteDmg.color = GreenHeal;
+        StartCoroutine(colorSwap());
+        spriteDmg.color = normal;
     }
 
     public void restartHP()
@@ -81,6 +98,9 @@ public class Health : MonoBehaviour
                 SoundManager.PlaySound("Getting Hurt");              
                 health -= 1;
                 IN.ActivateInvulnerability();
+                spriteDmg.color = RedHurt;
+                StartCoroutine(colorSwap());
+                spriteDmg.color = normal;
             }
             KB.KnockBack();
 
@@ -105,6 +125,10 @@ public class Health : MonoBehaviour
                 SoundManager.PlaySound("Getting Hurt");
                 health -= 1;
                 IN.ActivateInvulnerability();
+                spriteDmg.color = RedHurt;
+                StartCoroutine(colorSwap());
+                spriteDmg.color = normal;
+               
             }
             KB.KnockBack();
 
@@ -131,6 +155,10 @@ public class Health : MonoBehaviour
                 SoundManager.PlaySound("Getting Hurt");
                 health -= 1;
                 IN.ActivateInvulnerability();
+                spriteDmg.color = RedHurt;
+                StartCoroutine(colorSwap());
+                spriteDmg.color = normal;
+                
             }
             KB.KnockBack();
 
@@ -141,5 +169,10 @@ public class Health : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
+    }
+
+    IEnumerator colorSwap()
+    {
+        yield return new WaitForSeconds(1);
     }
 }
