@@ -49,23 +49,23 @@ public class JumpEnemyAttacker : MonoBehaviour
     private Rigidbody2D enemyRB;
 
     [Header("Shooting")]
-    private float timeBtwShots;
-    [SerializeField]
-    public float startTimeBtwShots;
+   // private float timeBtwShots;
+   // [SerializeField]
+    //public float startTimeBtwShots;
     public GameObject projectile;
 
     private void Start()
     {
         enemyRB = GetComponent<Rigidbody2D>();
         enemyAnim = GetComponent<Animator>();
-        timeBtwShots = startTimeBtwShots;
+       // timeBtwShots = startTimeBtwShots;
         player = GameManager.Instance.player.transform;
         HP = GetComponent<BossEnemy>();
     }
 
     private void Update()
     {
-        if (timeBtwShots <= 0)
+       /* if (timeBtwShots <= 0)
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
             timeBtwShots = startTimeBtwShots;
@@ -82,7 +82,7 @@ public class JumpEnemyAttacker : MonoBehaviour
             jumpHeight = 12;
             aggroDistance = 10.5f;
             startTimeBtwShots = 1.5f;
-        }
+        } */
     }
 
     private void FixedUpdate()

@@ -15,6 +15,7 @@ public class FlashLightPowerUp : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            SoundManager.PlaySound("Spawn");
             lit = collision.gameObject.GetComponent<PlayerController>().LightObject;
             lit.SetActive(true);
 

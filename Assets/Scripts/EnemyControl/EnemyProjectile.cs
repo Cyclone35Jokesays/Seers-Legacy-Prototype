@@ -23,6 +23,23 @@ public class EnemyProjectile : MonoBehaviour
 
     private void Update()
     {
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, lifeTime, hitting);
+        if (hitInfo.collider != null)
+        {
+            if (hitInfo.collider.CompareTag("Player"))
+            {
+                hitInfo.collider.GetComponent<Health>().takeDamage();
+            }
+
+            else if (hitInfo.collider.CompareTag("Untagged"))
+            {
+                DestroyProjectile();
+            }
+
+            DestroyProjectile();
+        }
+
+
         transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
         if (transform.position.x == target.x && transform.position.y == target.y)
@@ -33,15 +50,9 @@ public class EnemyProjectile : MonoBehaviour
         transform.Translate(direction * speed * Time.deltaTime);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            collision.GetComponent<Health>().takeDamage();
-            DestroyProjectile();
-        }
-
-        else if (collision.CompareTag("Ground"))
+        if ((hitting.value & 1<<collision.gameObject.layer) != 0)
         {
             DestroyProjectile();
         }

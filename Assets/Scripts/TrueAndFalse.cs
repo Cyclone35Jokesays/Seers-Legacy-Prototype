@@ -13,6 +13,7 @@ public class TrueAndFalse : MonoBehaviour
     {
         block.gameObject.SetActive(true);
         block2.gameObject.SetActive(false);
+    
     }
 
     public void SettingFalse()
@@ -26,7 +27,6 @@ public class TrueAndFalse : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             SettingTrue();
-           // gameObject.SetActive(false);
         }
 
         else

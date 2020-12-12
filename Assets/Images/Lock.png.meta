@@ -51,7 +51,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0.7
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -63,7 +63,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -75,7 +75,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 256
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -88,7 +88,53 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline: []
+    outline:
+    - - {x: 34, y: 14}
+      - {x: 32, y: 15}
+      - {x: 32, y: 29}
+      - {x: 31, y: 31}
+      - {x: 29, y: 32}
+      - {x: 29, y: 38}
+      - {x: 18, y: 49}
+      - {x: 15, y: 49}
+      - {x: 13, y: 51}
+      - {x: -12, y: 51}
+      - {x: -13, y: 49}
+      - {x: -18, y: 49}
+      - {x: -22, y: 45}
+      - {x: -25, y: 41}
+      - {x: -28, y: 38}
+      - {x: -31, y: 30}
+      - {x: -32, y: 14}
+      - {x: -37, y: 10}
+      - {x: -37, y: -50}
+      - {x: -36, y: -51}
+      - {x: 37, y: -51}
+      - {x: 37, y: 10}
+      - {x: 36, y: 11}
+    - - {x: -8, y: -30}
+      - {x: -5, y: -27}
+      - {x: -4, y: -27}
+      - {x: -1, y: -24}
+      - {x: 1, y: -21}
+      - {x: 1, y: -11}
+      - {x: -2, y: -8}
+      - {x: -2, y: -3}
+      - {x: 1, y: -2}
+      - {x: 3, y: -3}
+      - {x: 2, y: -6}
+      - {x: 4, y: -8}
+      - {x: 0, y: -12}
+      - {x: 0, y: -20}
+      - {x: 10, y: -30}
+      - {x: -9, y: -30}
+    - - {x: -13, y: 26}
+      - {x: -10, y: 29}
+      - {x: -6, y: 34}
+      - {x: 4, y: 34}
+      - {x: 12, y: 26}
+      - {x: 12, y: 21}
+      - {x: -14, y: 21}
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000

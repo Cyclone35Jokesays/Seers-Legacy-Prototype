@@ -12,10 +12,12 @@ public class ghostBossBehaviour : MonoBehaviour
     private PlayerController pc;
     public GameObject block1;
     public GameObject block2;
+    public GameObject CamSwitch;
 
     private void Start()
     {
         pc = GameManager.Instance.GetComponent<PlayerController>();
+        StartCoroutine(makeSound());
     }
 
     private void Update()
@@ -28,11 +30,18 @@ public class ghostBossBehaviour : MonoBehaviour
             Destroy(gameObject);
             block1.gameObject.SetActive(false);
             block2.gameObject.SetActive(false);
+            CamSwitch.gameObject.SetActive(false);
         }
     }
 
     public void TakeDamage(int damage)
     {
         health -= damage;
+    }
+
+    IEnumerator makeSound()
+    {
+        SoundManager.PlaySound("Spirit");
+        yield return new WaitForSeconds(11);
     }
 }

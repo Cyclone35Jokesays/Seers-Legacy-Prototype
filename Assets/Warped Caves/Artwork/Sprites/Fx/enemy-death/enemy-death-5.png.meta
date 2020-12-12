@@ -23,6 +23,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -50,13 +51,14 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0.7
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
@@ -98,7 +100,59 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline: []
+    outline:
+    - - {x: -32.5, y: -11}
+      - {x: -27.5, y: -15}
+      - {x: -24.5, y: -17}
+      - {x: -21.5, y: -17}
+      - {x: -21.5, y: -13}
+      - {x: -26.5, y: -1}
+      - {x: -29.5, y: -1}
+      - {x: -32.5, y: -2}
+    - - {x: 11.5, y: 18}
+      - {x: 8.5, y: 19}
+      - {x: 0.5, y: 19}
+      - {x: -5.5, y: 18}
+      - {x: -7.5, y: 16}
+      - {x: -6.5, y: 12}
+      - {x: 7.5, y: 12}
+      - {x: 13.5, y: 9}
+      - {x: 16.5, y: 4}
+      - {x: 16.5, y: -3}
+      - {x: 17.5, y: -9}
+      - {x: 19.5, y: -11}
+      - {x: 22.5, y: -10}
+      - {x: 23.5, y: -6}
+      - {x: 23.5, y: 3}
+      - {x: 21.5, y: 9}
+    - - {x: 26.5, y: 19}
+      - {x: 26.5, y: -3}
+      - {x: 28.5, y: -5}
+      - {x: 31.5, y: -4}
+      - {x: 33.5, y: 0}
+      - {x: 33.5, y: 15}
+      - {x: 30.5, y: 19}
+    - - {x: -32.5, y: 9}
+      - {x: -33.5, y: 4}
+      - {x: -31.5, y: 2}
+      - {x: -28.5, y: 3}
+      - {x: -24.5, y: 11}
+      - {x: -24.5, y: 13}
+      - {x: -27.5, y: 14}
+    - - {x: -26.5, y: 17}
+      - {x: -26.5, y: 16}
+      - {x: -24.5, y: 14}
+      - {x: -23.5, y: 14}
+      - {x: -20.5, y: 17}
+      - {x: -20.5, y: 19}
+      - {x: -23.5, y: 20}
+    - - {x: 16.5, y: 21}
+      - {x: 13.5, y: 17}
+      - {x: 15.5, y: 14}
+      - {x: 19.5, y: 15}
+      - {x: 22.5, y: 19}
+      - {x: 22.5, y: 21}
+      - {x: 19.5, y: 22}
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000

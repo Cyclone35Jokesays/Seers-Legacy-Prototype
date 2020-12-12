@@ -971,7 +971,7 @@ ParticleSystem:
     m_BurstCount: 0
     m_Bursts: []
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -4853,14 +4853,14 @@ GameObject:
   - component: {fileID: 1377421297}
   - component: {fileID: 1377421298}
   - component: {fileID: 1734676216}
-  - component: {fileID: 1734676215}
+  - component: {fileID: 939505359283069534}
   m_Layer: 0
   m_Name: Light
   m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1377421297
 Transform:
   m_ObjectHideFlags: 0
@@ -4889,7 +4889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.61
+  m_FalloffIntensity: 0.6
   m_Color: {r: 1, g: 0.9976544, b: 0.7490566, a: 1}
   m_Intensity: 0
   m_LightVolumeOpacity: 0.12
@@ -4900,10 +4900,10 @@ MonoBehaviour:
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 59
-  m_PointLightOuterAngle: 135
+  m_PointLightInnerAngle: 60
+  m_PointLightOuterAngle: 160
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 19
+  m_PointLightOuterRadius: 20
   m_PointLightDistance: 3
   m_PointLightQuality: 0
   m_ShapeLightParametricSides: 5
@@ -4935,7 +4935,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1734676215
+--- !u!114 &939505359283069534
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5057,6 +5057,7 @@ MonoBehaviour:
     type: 3}
   turnSolid: 0
   startTimeBtwShots: 0.25
+  startTimeBtwShots2: 3
 --- !u!1 &2002897087381540688
 GameObject:
   m_ObjectHideFlags: 0
@@ -5262,8 +5263,8 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.934
   m_Color: {r: 0.14887854, g: 0.64066213, b: 0.9622642, a: 1}
-  m_Intensity: 2.6
-  m_LightVolumeOpacity: 0.24
+  m_Intensity: 2.55
+  m_LightVolumeOpacity: 0.23
   m_ApplyToSortingLayers: 00000000111b8119
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
@@ -5311,7 +5312,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7438225583457520371}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.95, z: 0}
+  m_LocalPosition: {x: 0, y: -0.9326, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 7438225584342273225}
@@ -5333,6 +5334,7 @@ GameObject:
   - component: {fileID: 3613169777030123469}
   - component: {fileID: 3924397160802738335}
   - component: {fileID: 419214975130545582}
+  - component: {fileID: 1734676215}
   m_Layer: 12
   m_Name: Player
   m_TagString: Player
@@ -5395,10 +5397,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blaster: {fileID: 1428738784}
   speed: 6.45
-  jumpForce: 10.2
+  jumpForce: 10.3
   playerState: 0
   groundCheck: {fileID: 7438225583457520372}
-  checkRadius: 0.1
+  checkRadius: 0.2
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -5427,7 +5429,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1.84}
+  m_Size: {x: 1.01, y: 1.84}
   m_Direction: 0
 --- !u!114 &635891047
 MonoBehaviour:
@@ -5444,6 +5446,7 @@ MonoBehaviour:
   health: 3
   numOfHearts: 3
   hearts:
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -5492,6 +5495,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   invincibilityCooldownSeconds: 1.5
   invincibilityDurationSeconds: 3
+--- !u!114 &1734676215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7438225584342273221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a45c354353408245b94ab90581f6ff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textCoins: {fileID: 0}
 --- !u!1 &7975822562882663548
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ TagManager:
   - FlyingBoss
   - Light
   - Barrier
+  - Coin
   layers:
   - Default
   - TransparentFX

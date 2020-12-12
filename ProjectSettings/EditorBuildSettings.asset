@@ -39,6 +39,33 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/FutureTileMaps/Level09.unity
     guid: ad90112c4677fb24eb7c2c07afb6d010
   - enabled: 1
+    path: Assets/Scenes/Levels/FutureTileMaps/Level10.unity
+    guid: ea542bc2192ae054fbc92e71a93703d0
+  - enabled: 1
+    path: Assets/Scenes/Levels/FutureTileMaps/Level11.unity
+    guid: b7b02cd5b3a6cb44faaae6f1fbbe597e
+  - enabled: 1
+    path: Assets/Scenes/Levels/FutureTileMaps/Level12.unity
+    guid: 57bd336015195f0409accc3a7671720a
+  - enabled: 1
+    path: Assets/Scenes/Levels/FutureTileMaps/Level13.unity
+    guid: feb50be8a2bf2f346b2796df61425939
+  - enabled: 1
+    path: Assets/Scenes/Levels/FutureTileMaps/Level14.unity
+    guid: 25f5b5ebc82d3c747a513aced45268f2
+  - enabled: 1
+    path: Assets/Scenes/Levels/FutureTileMaps/Level15.unity
+    guid: 222d7f082c3608b4998665d3c9e38279
+  - enabled: 1
+    path: Assets/Scenes/Levels/FutureTileMaps/Level16.unity
+    guid: 57e15fa6d48d82346a389bc7a4dd2d09
+  - enabled: 1
+    path: Assets/Scenes/Levels/FutureTileMaps/Level17.unity
+    guid: bfed28dd77e534d4495bd172c63e3840
+  - enabled: 1
+    path: Assets/Scenes/Levels/FutureTileMaps/LevelB1.unity
+    guid: 356a5ab6ccb7ddd408476b7758e7a331
+  - enabled: 1
     path: Assets/Scenes/Levels/Ending.unity
     guid: 57489d74dc7dfed4ba77f69d48a0b5cd
   m_configObjects: {}

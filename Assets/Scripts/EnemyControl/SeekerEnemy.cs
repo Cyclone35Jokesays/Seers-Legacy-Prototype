@@ -63,6 +63,7 @@ public class SeekerEnemy : MonoBehaviour
 
         if (timeBtwShots <= 0)
         {
+            SoundManager.PlaySound("EnemyShot");
             Instantiate(projectile, transform.position, Quaternion.identity);
             timeBtwShots = startTimeBtwShots;
         }

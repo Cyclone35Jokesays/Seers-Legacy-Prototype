@@ -23,6 +23,7 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -50,13 +51,14 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0.7
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
   applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
@@ -98,7 +100,68 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline: []
+    outline:
+    - - {x: -3.5, y: -22}
+      - {x: -0.5, y: -21}
+      - {x: -0.5, y: -18}
+      - {x: -3.5, y: -17}
+      - {x: -5.5, y: -19}
+    - - {x: 20.5, y: -11}
+      - {x: 24.5, y: -7}
+      - {x: 28.5, y: -2}
+      - {x: 31.5, y: 3}
+      - {x: 33.5, y: 8}
+      - {x: 33.5, y: 18}
+      - {x: 29.5, y: 22}
+      - {x: 25.5, y: 22}
+      - {x: 19.5, y: 20}
+      - {x: 14.5, y: 18}
+      - {x: 10.5, y: 15}
+      - {x: 4.5, y: 18}
+      - {x: -5.5, y: 18}
+      - {x: -10.5, y: 16}
+      - {x: -16.5, y: 11}
+      - {x: -12.5, y: 16}
+      - {x: -12.5, y: 17}
+      - {x: -14.5, y: 19}
+      - {x: -18.5, y: 18}
+      - {x: -28.5, y: 8}
+      - {x: -30.5, y: 3}
+      - {x: -31.5, y: 0}
+      - {x: -31.5, y: -8}
+      - {x: -28.5, y: -14}
+      - {x: -22.5, y: -16}
+      - {x: -16.5, y: -16}
+      - {x: -11.5, y: -13}
+      - {x: -12.5, y: -10}
+      - {x: -20.5, y: -10}
+      - {x: -23.5, y: -5}
+      - {x: -20.5, y: -1}
+      - {x: -18.5, y: 2}
+      - {x: -14.5, y: 6}
+      - {x: -11.5, y: 6}
+      - {x: -1.5, y: 11}
+      - {x: 6.5, y: 7}
+      - {x: 11.5, y: 4}
+      - {x: 11.5, y: -1}
+      - {x: 13.5, y: -6}
+      - {x: 10.5, y: -11}
+      - {x: 6.5, y: -15}
+      - {x: 0.5, y: -19}
+      - {x: 1.5, y: -22}
+      - {x: 4.5, y: -22}
+      - {x: 7.5, y: -21}
+      - {x: 12.5, y: -19}
+      - {x: 19.5, y: -11}
+    - - {x: 21.5, y: 2}
+      - {x: 20.5, y: 5}
+      - {x: 18.5, y: 10}
+      - {x: 16.5, y: 11}
+      - {x: 21.5, y: 13}
+      - {x: 24.5, y: 12}
+      - {x: 24.5, y: 7}
+      - {x: 20.5, y: -2}
+      - {x: 21.5, y: -2}
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000

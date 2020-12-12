@@ -18,6 +18,7 @@ public class Blaster : MonoBehaviour
     private float timeBtwShots;
     [SerializeField]
     public float startTimeBtwShots;
+    public float startTimeBtwShots2;
 
     private void Update()
     {
@@ -40,7 +41,7 @@ public class Blaster : MonoBehaviour
                 if (Input.GetMouseButtonDown(1))
                 {
                     Instantiate(turnSolidProjectile, shotPoint.position, transform.rotation);
-                    timeBtwShots = startTimeBtwShots;
+                    timeBtwShots = startTimeBtwShots2;
                     SoundManager.PlaySound("Blaster");
                 }
             }

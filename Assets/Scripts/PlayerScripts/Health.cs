@@ -84,7 +84,7 @@ public class Health : MonoBehaviour
             }
             KB.KnockBack();
 
-            if (health <= 0 || health <= -1)
+            if (health <= 0)
             {
                 restartHP();
                 transform.position = GameManager.Instance.lastCheckPointPos;
@@ -108,7 +108,7 @@ public class Health : MonoBehaviour
             }
             KB.KnockBack();
 
-            if (health <= 0 || health <= -1)
+            if (health <= 0)
             {
                 restartHP();
                 transform.position = GameManager.Instance.lastCheckPointPos;
@@ -134,7 +134,7 @@ public class Health : MonoBehaviour
             }
             KB.KnockBack();
 
-            if (health <= 0 || health <= -1)
+            if (health <= 0)
             {
                 restartHP();
                 transform.position = GameManager.Instance.lastCheckPointPos;

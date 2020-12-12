@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     public GameObject Health;
     private PlayerController pc;
 
+
     private void Start()
     {
         pc = GameManager.Instance.GetComponent<PlayerController>();

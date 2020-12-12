@@ -15,6 +15,7 @@ public class DJpowerup : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            SoundManager.PlaySound("Spawn");
             //anim.Play("Secret Message");
             collision.gameObject.GetComponent<PlayerController>().extraJumpValue += 1;
             // OnCollected.Invoke(this.gameObject);

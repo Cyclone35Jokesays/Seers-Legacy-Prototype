@@ -58,6 +58,7 @@ public class PlayerController : MonoBehaviour
     // private GameMaster gm;
     [SerializeField]
     public GameObject DJEffect;
+    [SerializeField]
     public GameObject LightObject;
     public Blaster solidHollowObject;
 
@@ -182,6 +183,7 @@ public class PlayerController : MonoBehaviour
             {
                 float localYRot = transform.localRotation.eulerAngles.y;
                 float horizontalInputDir = Input.GetAxisRaw("Horizontal");
+
                 if ((localYRot == 0 && horizontalInputDir > 0) || (localYRot == 180 && horizontalInputDir < 0))
                 {
                     isGrabbing = true;
@@ -196,7 +198,6 @@ public class PlayerController : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.Space))
                 {
                     wallJumpCounter = wallJumpTime;
-
                     rb.velocity = new Vector2(-Input.GetAxisRaw("Horizontal") * speed, jumpForce);
                     rb.gravityScale = gravityStore;
                     isGrabbing = false;
