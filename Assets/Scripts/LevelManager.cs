@@ -10,9 +10,4 @@ public class LevelManager : MonoBehaviour
     {
         player = GameManager.Instance.player.transform;
     }
-
-    private void Awake()
-    {
-        
-    }
 }
