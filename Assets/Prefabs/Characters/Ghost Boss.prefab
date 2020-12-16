@@ -4913,7 +4913,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7711929719239965309
 Transform:
   m_ObjectHideFlags: 0
@@ -5028,7 +5028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c6d8397a1cc80845865bf208bac8e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 20
+  health: 22
   deathEffect: {fileID: 7225817443232445325, guid: 4522d475ceef6fe42b9023617c94cbca,
     type: 3}
   Health: {fileID: 8861429808185266569, guid: 6724ba0a46cc4954e8e7625ff78f6b30, type: 3}

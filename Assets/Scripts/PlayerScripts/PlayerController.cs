@@ -82,11 +82,12 @@ public class PlayerController : MonoBehaviour
 
         moveInput = Input.GetAxis("Horizontal");
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.A) && isGrounded)
         {
             SoundManager.PlaySound("Running");
         }
-        if (Input.GetKeyDown(KeyCode.D))
+
+        if (Input.GetKeyDown(KeyCode.D) && isGrounded)
         {
             SoundManager.PlaySound("Running");
         }

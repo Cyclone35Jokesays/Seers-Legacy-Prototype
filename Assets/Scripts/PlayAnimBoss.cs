@@ -16,7 +16,7 @@ public class PlayAnimBoss : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             miniBoss.SetBool("playing", true);
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

@@ -6,10 +6,16 @@ public class MusicTransistions : MonoBehaviour
 {
     private static MusicTransistions instance;
 
+    [SerializeField]
     public AudioSource track1;
+    [SerializeField]
     public AudioSource track2;
+    [SerializeField]
+    public AudioSource track3;
 
+    [SerializeField]
     public int trackSelector;
+    [SerializeField]
     public int trackHistory;
 
     private void Awake()
@@ -28,7 +34,7 @@ public class MusicTransistions : MonoBehaviour
 
     private void Start()
     {
-        trackSelector = Random.Range(0, 2);
+        trackSelector = Random.Range(0, 3);
         if (trackSelector == 0)
         {
             track1.Play();
@@ -38,14 +44,19 @@ public class MusicTransistions : MonoBehaviour
         {
             track2.Play();
             trackHistory = 2;
-        }       
+        }
+        else if (trackSelector == 2)
+        {
+            track3.Play();
+            trackHistory = 3;
+        }
     }
 
     private void Update()
     {
-        if (track1.isPlaying == false && track2.isPlaying == false)
+        if (track1.isPlaying == false && track2.isPlaying == false && track3.isPlaying == false)
         {
-            trackSelector = Random.Range(0, 2);
+            trackSelector = Random.Range(0, 3);
             if (trackSelector == 0 && trackHistory != 1)
             {
                 track1.Play();
@@ -55,6 +66,11 @@ public class MusicTransistions : MonoBehaviour
             {
                 track2.Play();
                 trackHistory = 2;
+            }
+            else if (trackSelector == 2 && trackHistory != 3)
+            {
+                track3.Play();
+                trackHistory = 3;
             }
         }
     }

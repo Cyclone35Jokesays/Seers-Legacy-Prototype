@@ -5396,7 +5396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blaster: {fileID: 1428738784}
-  speed: 6.45
+  speed: 6.46
   jumpForce: 10.3
   playerState: 0
   groundCheck: {fileID: 7438225583457520372}
